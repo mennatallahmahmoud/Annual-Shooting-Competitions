@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>مسابقات الرماية السنوية</title>
+        <link rel="icon" href="imgs/logo.webp"/>
+        <link rel="stylesheet" href="css/bootstrap.rtl.css"/>
+        <link rel="stylesheet" href="css/bootstrap.rtl.min.css"/>
+        <link rel="stylesheet" href="css/css/all.min.css"/>
+        <link rel="stylesheet" href="css/css/all.css"/>
+        <link rel="stylesheet" href="css/swiper-bundle.css"/>
+        <link rel="stylesheet" href="css/main.css"/>
+    </head>
+    <body>
+
+        <nav class="navbar navbar-expand-md d-none d-md-block sub-menu position-relative">
+            <div class="container text-center">
+                <p id="date" class="text-white mb-0 mx-auto"></p>
+            </div>
+        </nav>
+
+
+        <nav class="navbar navbar-expand-lg p-0 middle-menu position-relative">
+            <div class="container position-relative py-1">
+                <a class="navbar-brand d-flex align-items-center" href="home.html">
+                    <img src="imgs/logo.webp" alt="شعار مسابقات الرماية السنوية" class="logo"/>
+                    <p class="mb-0 ps-2">
+                        <span class="d-block">مسابقات الرماية السنوية</span>
+                        <span>Annual Shooting Competitions</span>
+                    </p>
+                </a>
+                <div class="middle-menu-side flex-row align-items-center d-none d-lg-flex">
+                    <div id="navbarSupportedContent">
+                        <form class="d-flex search-form rounded-2" role="search">
+                            <input class="form-control bg-transparent rounded-0 border-0" type="search" placeholder="كلمة البحث" aria-label="Search"/>
+                            <button class="btn" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+                        </form>
+                    </div>
+                    <ul class="navbar-nav social-icons flex-row gap-1">
+                        <li><a href="https://www.instagram.com" target="_blank">
+                            <i class="fa-brands fa-instagram fa-lg"></i>
+                        </a></li>
+                        <li><a href="https://www.x.com" target="_blank">
+                            <i class="fa-brands fa-x-twitter fa-lg"></i>
+                        </a></li>
+                        <li><a href="https://www.snapchat.com" target="_blank">
+                            <i class="fa-brands fa-snapchat fa-lg"></i>
+                        </a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        
+        <nav class="navbar navbar-expand-lg main-menu position-relative">
+            <div class="container position-relative">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fa-solid fa-bars-staggered navbar-fa-icon"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav mx-auto align-items-center">
+                        <li class="nav-item">
+                            <a class="nav-link active d-none d-lg-block" aria-current="page" href="index.html"><i class="fa-solid fa-house fa-lg"></i></a>
+                            <a class="nav-link menu-links active d-lg-none" href="index.html" >
+                                الرئيسية
+                            </a>
+                        </li>
+                        <li class="nav-item dropdown position-relative">
+                            <a class="nav-link menu-links dropdown-toggle" href="#" >
+                                المسابقات
+                            </a>
+                            <ul class="dropDown-menu border-0 position-absolute p-3 rounded-2 d-none ">
+                                <li class="mb-2"><a class="dropdown-item menu-links" href="#">
+                                    <i class="fa-solid fa-angle-left"></i>
+                                    تاريخ المسابقات</a></li>
+                                <li><a class="dropdown-item menu-links" href="#">
+                                    <i class="fa-solid fa-angle-left"></i>تعريف المسابقات</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link menu-links" href="#">من أقوال القائد</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link menu-links" href="#">أنواع المسابقات</a>
+                        </li>
+                        <li class="nav-item dropdown position-relative">
+                            <a class="nav-link menu-links dropdown-toggle" href="#" >
+                                التسجيل للمشاركة في المسابقات
+                            </a>
+                            <ul class="dropDown-menu border-0 position-absolute p-3 rounded-2 d-none ">
+                                <li class="mb-2"><a class="dropdown-item menu-links" href="#">
+                                    <i class="fa-solid fa-angle-left"></i>شروط التسجيل</a></li>
+                                <li class="mb-2"><a class="dropdown-item menu-links" href="#">
+                                    <i class="fa-solid fa-angle-left"></i>تسجيل فردي</a></li>
+                                <li><a class="dropdown-item menu-links" href="#">
+                                    <i class="fa-solid fa-angle-left"></i>تسجيل فرق إسقاط الصحون</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown position-relative">
+                            <a class="nav-link menu-links dropdown-toggle" href="#" >
+                                المسابقات والإعلام
+                            </a>
+                            <ul class="dropDown-menu border-0 position-absolute p-3 rounded-2 d-none ">
+                                <li class="mb-2"><a class="dropdown-item menu-links" href="#">
+                                    <i class="fa-solid fa-angle-left"></i>معرض الصور</a></li>
+                                <li class="mb-2"><a class="dropdown-item menu-links" href="#">
+                                    <i class="fa-solid fa-angle-left"></i>معرض الفيديو</a></li>
+                                <li><a class="dropdown-item menu-links" href="#">
+                                    <i class="fa-solid fa-angle-left"></i>أخبارنا</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link menu-links" href="#">النشرات اليومية</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link menu-links" href="#">معرض المسابقات</a>
+                        </li>
+                        <li class="nav-item dropdown position-relative">
+                            <a class="nav-link menu-links dropdown-toggle" href="#" >
+                                اتصل بنا
+                            </a>
+                            <ul class="dropDown-menu border-0 position-absolute p-3 rounded-2 d-none ">
+                                <li class="mb-2"><a class="dropdown-item menu-links text-white" href="#">
+                                    <i class="fa-solid fa-angle-left"></i>معلومات الاتصال</a></li>
+                                <li><a class="dropdown-item menu-links text-white" href="#">
+                                    <i class="fa-solid fa-angle-left"></i>خريطة الموقع</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+
+        <section class="hero-section position-relative">
+            <div class="content position-absolute text-center w-100 h-100">
+                <div class="h-100 text-white fw-bold position-relative">
+                    <span>مسابقـات الرمـاية السنـوية الرابـع عشر 2026</span><br/>
+                    <span>من 01 / 11 / 2025 إلى 01 / 02 / 2026</span>
+                </div>
+            </div>
+            <div class="hero-carousel-cont position-relative w-100">
+                <div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="2000">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                    </div>
+                    <div class="hero-carousel carousel-inner position-relative">
+                        <div class="carousel-item active">
+                            <img src="imgs/hero-slider (1).jpg" class="d-block w-100" alt="Hero Section Image">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="imgs/hero-slider (2).jpg" class="d-block w-100" alt="Hero Section Image">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="imgs/hero-slider (3).jpg" class="d-block w-100" alt="Hero Section Image">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="imgs/hero-slider (4).jpg" class="d-block w-100" alt="Hero Section Image">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="imgs/hero-slider (5).jpg" class="d-block w-100" alt="Hero Section Image">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+                <div class="hero-cards-section">
+                    <div class="container">
+                        <div class="row mx-auto position-relative">
+                            <div class="col-12 col-md-6 col-lg-3">
+                                <div class="card p-2 shadow-sm">
+                                    <div class="card-body text-start d-flex flex-column justify-content-between">
+                                        <h5 class="fw-bold mb-3">بدأ التسجيل لمسابقات الرماية السنوية الرابع عشر للرماية 2025/2026</h5>
+                                        <div class="secondary-btn d-flex align-items-center">
+                                            <a href="#" class="main-links card-link fw-bold">أقرأ المزيد</a>
+                                            <svg width="22" height="22" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" class="target-icon ms-2">
+                                                <circle cx="32" cy="32" r="28" stroke="currentColor" stroke-width="3" fill="none"/>
+                                                <circle cx="32" cy="32" r="16" stroke="currentColor" stroke-width="3" fill="none"/>
+                                                <circle cx="32" cy="32" r="6" fill="currentColor"/>
+                                                <line x1="32" y1="2" x2="32" y2="14" stroke="currentColor" stroke-width="2"/>
+                                                <line x1="32" y1="50" x2="32" y2="62" stroke="currentColor" stroke-width="2"/>
+                                                <line x1="2" y1="32" x2="14" y2="32" stroke="currentColor" stroke-width="2"/>
+                                                <line x1="50" y1="32" x2="62" y2="32" stroke="currentColor" stroke-width="2"/>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 col-lg-3">
+                                <div class="card p-2 shadow-sm">
+                                    <div class="card-body text-start d-flex flex-column justify-content-between">
+                                        <h5 class="fw-bold mb-3">حامد بن زايد يشهد حفل اختتام فعاليات مسابقات الرماية السنوية الثانية عشرة 2024</h5>
+                                        <div class="secondary-btn d-flex align-items-center">
+                                            <a href="#" class="main-links card-link fw-bold">أقرأ المزيد</a>
+                                            <svg width="22" height="22" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" class="target-icon ms-2">
+                                                <circle cx="32" cy="32" r="28" stroke="currentColor" stroke-width="3" fill="none"/>
+                                                <circle cx="32" cy="32" r="16" stroke="currentColor" stroke-width="3" fill="none"/>
+                                                <circle cx="32" cy="32" r="6" fill="currentColor"/>
+                                                <line x1="32" y1="2" x2="32" y2="14" stroke="currentColor" stroke-width="2"/>
+                                                <line x1="32" y1="50" x2="32" y2="62" stroke="currentColor" stroke-width="2"/>
+                                                <line x1="2" y1="32" x2="14" y2="32" stroke="currentColor" stroke-width="2"/>
+                                                <line x1="50" y1="32" x2="62" y2="32" stroke="currentColor" stroke-width="2"/>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 col-lg-3">
+                                <div class="card p-2 shadow-sm">
+                                    <div class="card-body text-start d-flex flex-column justify-content-between">
+                                        <h5 class="fw-bold mb-3">200 متنافس فازوا في 10 مسابقات للرماية 2021</h5>
+                                        <div class="secondary-btn d-flex align-items-center">
+                                            <a href="#" class="main-links card-link fw-bold">أقرأ المزيد</a>
+                                            <svg width="22" height="22" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" class="target-icon ms-2">
+                                                <circle cx="32" cy="32" r="28" stroke="currentColor" stroke-width="3" fill="none"/>
+                                                <circle cx="32" cy="32" r="16" stroke="currentColor" stroke-width="3" fill="none"/>
+                                                <circle cx="32" cy="32" r="6" fill="currentColor"/>
+                                                <line x1="32" y1="2" x2="32" y2="14" stroke="currentColor" stroke-width="2"/>
+                                                <line x1="32" y1="50" x2="32" y2="62" stroke="currentColor" stroke-width="2"/>
+                                                <line x1="2" y1="32" x2="14" y2="32" stroke="currentColor" stroke-width="2"/>
+                                                <line x1="50" y1="32" x2="62" y2="32" stroke="currentColor" stroke-width="2"/>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 col-lg-3">
+                                <div class="card p-2 shadow-sm">
+                                    <div class="card-body text-start d-flex flex-column justify-content-between">
+                                        <h5 class="fw-bold mb-3">"خليفة الانسانية" تشارك في مهرجان الوحدات المساندة الثامن للرماية 2020</h5>
+                                        <div class="secondary-btn d-flex align-items-center">
+                                            <a href="#" class="main-links card-link fw-bold">أقرأ المزيد</a>
+                                            <svg width="22" height="22" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" class="target-icon ms-2">
+                                                <circle cx="32" cy="32" r="28" stroke="currentColor" stroke-width="3" fill="none"/>
+                                                <circle cx="32" cy="32" r="16" stroke="currentColor" stroke-width="3" fill="none"/>
+                                                <circle cx="32" cy="32" r="6" fill="currentColor"/>
+                                                <line x1="32" y1="2" x2="32" y2="14" stroke="currentColor" stroke-width="2"/>
+                                                <line x1="32" y1="50" x2="32" y2="62" stroke="currentColor" stroke-width="2"/>
+                                                <line x1="2" y1="32" x2="14" y2="32" stroke="currentColor" stroke-width="2"/>
+                                                <line x1="50" y1="32" x2="62" y2="32" stroke="currentColor" stroke-width="2"/>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+
+        <section class="welcome-section shadow-sm">
+            <div class="container d-flex justify-content-center align-items-center flex-column-reverse flex-lg-row gap-3">
+                <div class="content d-flex align-items-center justify-content-center gap-2 flex-column flex-md-row">
+                    <img src="imgs/target-icon.webp" class="d-none d-md-block" alt="Welcome Image"/>
+                    <div>
+                        <h2 class="fw-bold position-relative">أهلاً بكم</h2>
+                        <svg width="270" height="24" viewBox="0 0 270 24" xmlns="http://www.w3.org/2000/svg" class="d-md-none rotated-heading-icon">
+                            <rect x="10" y="11" width="210" height="2" rx="1" fill="#ab7037"/>
+                            <rect x="220" y="7" width="20" height="10" rx="2" fill="#ab7037"/>
+                            <path d="M240 17
+                                C255 21, 262 18, 255 14
+                                L240 14 Z"
+                                fill="#ab7037"/>
+                        </svg>
+                        <p class="mb-0">
+                            تنظم قيادة الوحدات المساندة مسابقات الرماية السنوية الرابع عشر لعام 2026/2025 
+                            والتي تعد من أهم المسابقات الرائدة في الدولة حيث تحظى بدعم واهتمام كبير على 
+                            مختلف المستويات وتهدف إلى تنمية مهارات الرماية الفردية وترسيخ حب الوطن وتعزيز التلاحم والترابط المجتمعي سعياً للحفاظ على مكتسباته الوطنية والتاريخية 
+                            التي رسخها لنا الآباء والأجداد وتتيح المسابقات الفرصة لمشاركة كافة فئات المجتمع الإماراتي من خلال منافسات الرماية المتعددة...
+                            <a href="#" class="main-links card-link fw-bold">أقرأ المزيد</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="welcome-img mx-3 text-center">
+                    <img src="imgs//welcome-img.jpg" class="shadow-lg "/>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="events-section">
+            <div class="container">
+                <div class="heading text-center mb-3">
+                    <h2 class="fw-bold position-relative mb-0">فعاليـات المسابقـات</h2>
+                    <svg width="270" height="24" viewBox="0 0 270 24" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="10" y="11" width="210" height="2" rx="1" fill="#ab7037"/>
+                        <rect x="220" y="7" width="20" height="10" rx="2" fill="#ab7037"/>
+                        <path d="M240 17
+                            C255 21, 262 18, 255 14
+                            L240 14 Z"
+                            fill="#ab7037"/>
+                    </svg>
+                </div>
+                <div class="row mb-5">
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="card p-3 h-100  position-relative">
+                            <div class="overflow-hidden rounded z-3"><img src="imgs/hero-cards (1).webp" class="card-img-top rounded" alt="Events Section Image"></div>
+                            <div class="card-body pb-0 d-flex flex-column justify-content-between">
+                                <h5 class="card-title fw-bold">بدأ التسجيل لمسابقات الرماية السنوية الرابع عشر للرماية 2025/2026</h5>
+                                <p class="card-text">إنطلاق مسابقات الرماية السنوية الرابع عشر 2026/2025 للوحدات...</p>
+                                <div class="secondary-btn d-flex align-items-center">
+                                    <a href="#" class="main-links card-link fw-bold">أقرأ المزيد</a>
+                                    <svg width="22" height="22" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" class="target-icon ms-2">
+                                        <circle cx="32" cy="32" r="28" stroke="currentColor" stroke-width="3" fill="none"/>
+                                        <circle cx="32" cy="32" r="16" stroke="currentColor" stroke-width="3" fill="none"/>
+                                        <circle cx="32" cy="32" r="6" fill="currentColor"/>
+                                        <line x1="32" y1="2" x2="32" y2="14" stroke="currentColor" stroke-width="2"/>
+                                        <line x1="32" y1="50" x2="32" y2="62" stroke="currentColor" stroke-width="2"/>
+                                        <line x1="2" y1="32" x2="14" y2="32" stroke="currentColor" stroke-width="2"/>
+                                        <line x1="50" y1="32" x2="62" y2="32" stroke="currentColor" stroke-width="2"/>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="card p-3 h-100">
+                            <div class="overflow-hidden rounded z-3"><img src="imgs/hero-cards (2).webp" class="card-img-top rounded" alt="Events Section Image"></div>
+                            <div class="card-body pb-0 d-flex flex-column justify-content-between">
+                                <h5 class="card-title fw-bold">حامد بن زايد يشهد حفل اختتام فعاليات مسابقات الرماية السنوية الثانية عشرة 2024</h5>
+                                <p class="card-text">شهد سمو الشيخ حامد بن زايد آل نهيان...</p>
+                                <div class="secondary-btn d-flex align-items-center">
+                                    <a href="#" class="main-links card-link fw-bold">أقرأ المزيد</a>
+                                    <svg width="22" height="22" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" class="target-icon ms-2">
+                                        <circle cx="32" cy="32" r="28" stroke="currentColor" stroke-width="3" fill="none"/>
+                                        <circle cx="32" cy="32" r="16" stroke="currentColor" stroke-width="3" fill="none"/>
+                                        <circle cx="32" cy="32" r="6" fill="currentColor"/>
+                                        <line x1="32" y1="2" x2="32" y2="14" stroke="currentColor" stroke-width="2"/>
+                                        <line x1="32" y1="50" x2="32" y2="62" stroke="currentColor" stroke-width="2"/>
+                                        <line x1="2" y1="32" x2="14" y2="32" stroke="currentColor" stroke-width="2"/>
+                                        <line x1="50" y1="32" x2="62" y2="32" stroke="currentColor" stroke-width="2"/>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="card p-3 h-100">
+                            <div class="overflow-hidden rounded z-3"><img src="imgs/hero-cards (3).webp" class="card-img-top rounded" alt="Events Section Image"></div>
+                            <div class="card-body pb-0 d-flex flex-column justify-content-between">
+                                <h5 class="card-title fw-bold">200 متنافس فازوا في 10 مسابقات للرماية 2021</h5>
+                                <p class="card-text">تحت رعاية صاحب السمو الشيخ محمد بن زايد...</p>
+                                <div class="secondary-btn d-flex align-items-center">
+                                    <a href="#" class="main-links card-link fw-bold">أقرأ المزيد</a>
+                                    <svg width="22" height="22" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" class="target-icon ms-2">
+                                        <circle cx="32" cy="32" r="28" stroke="currentColor" stroke-width="3" fill="none"/>
+                                        <circle cx="32" cy="32" r="16" stroke="currentColor" stroke-width="3" fill="none"/>
+                                        <circle cx="32" cy="32" r="6" fill="currentColor"/>
+                                        <line x1="32" y1="2" x2="32" y2="14" stroke="currentColor" stroke-width="2"/>
+                                        <line x1="32" y1="50" x2="32" y2="62" stroke="currentColor" stroke-width="2"/>
+                                        <line x1="2" y1="32" x2="14" y2="32" stroke="currentColor" stroke-width="2"/>
+                                        <line x1="50" y1="32" x2="62" y2="32" stroke="currentColor" stroke-width="2"/>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="card p-3 h-100">
+                            <div class="overflow-hidden rounded z-3"><img src="imgs/hero-cards (4).webp" class="card-img-top rounded" alt="Events Section Image"></div>
+                            <div class="card-body pb-0 d-flex flex-column justify-content-between">
+                                <h5 class="card-title fw-bold">200 متنافس فازوا في 10 مسابقات للرماية 2021</h5>
+                                <p class="card-text">تحت رعاية صاحب السمو الشيخ محمد بن زايد...</p>
+                                <div class="secondary-btn d-flex align-items-center">
+                                    <a href="#" class="main-links card-link fw-bold">أقرأ المزيد</a>
+                                    <svg width="22" height="22" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" class="target-icon ms-2">
+                                        <circle cx="32" cy="32" r="28" stroke="currentColor" stroke-width="3" fill="none"/>
+                                        <circle cx="32" cy="32" r="16" stroke="currentColor" stroke-width="3" fill="none"/>
+                                        <circle cx="32" cy="32" r="6" fill="currentColor"/>
+                                        <line x1="32" y1="2" x2="32" y2="14" stroke="currentColor" stroke-width="2"/>
+                                        <line x1="32" y1="50" x2="32" y2="62" stroke="currentColor" stroke-width="2"/>
+                                        <line x1="2" y1="32" x2="14" y2="32" stroke="currentColor" stroke-width="2"/>
+                                        <line x1="50" y1="32" x2="62" y2="32" stroke="currentColor" stroke-width="2"/>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="separator">
+            <div class="container position-relative z-3 d-flex flex-column flex-md-row justify-content-evenly align-items-center gap-3">
+                <h2 class="fw-bold position-relative text-white text-center">سجل للمشاركة في المسابقات</h2>
+                <div class="d-flex flex-column flex-md-row justify-content-center align-items-center gap-3">
+                    <button class="btn main-btn fw-bold">تسجيل فردي</button>
+                    <button class="btn main-btn fw-bold">تسجيل فرق إسقاط الصحون</button>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="images-section">
+            <div class="container">
+                <div class="heading text-center mb-3">
+                    <h2 class="fw-bold position-relative mb-0">ألبـوم الصـور</h2>
+                    <svg width="270" height="24" viewBox="0 0 270 24" xmlns="http://www.w3.org/2000/svg" class="rotated-heading-icon">
+                        <g transform="translate(45, 0)"> 
+                            <rect x="10" y="11" width="150" height="2" rx="1" fill="#ab7037"/>
+                            <rect x="160" y="7" width="20" height="10" rx="2" fill="#ab7037"/>
+                            <path d="M180 17
+                            C195 21, 202 18, 195 14
+                            L180 14 Z"
+                            fill="#ab7037"/>
+                        </g>
+                    </svg>
+                </div>
+                <div class="text-center">
+                    <div class="swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img src="imgs/images-section (1).jpg" class="shadow"/>
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="imgs/images-section (2).jpg" class="shadow"/>
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="imgs/images-section (3).jpg" class="shadow"/>
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="imgs/images-section (4).jpg" class="shadow"/>
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="imgs/images-section (5).jpg" class="shadow"/>
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="imgs/images-section (6).jpg" class="shadow"/>
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="imgs/images-section (7).jpg" class="shadow"/>
+                            </div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                    <button class="btn main-btn fw-bold px-4 mt-3">أعرض المزيد</button>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="videos-section">
+            <div class="container text-center">
+                <div class="heading text-center mb-3">
+                    <h2 class="fw-bold position-relative mb-0">الفيــديـــو</h2>
+                    <svg width="270" height="24" viewBox="0 0 270 24" xmlns="http://www.w3.org/2000/svg">
+                        <g transform="translate(45, 0)"> 
+                            <rect x="10" y="11" width="150" height="2" rx="1" fill="#ab7037"/>
+                            <rect x="160" y="7" width="20" height="10" rx="2" fill="#ab7037"/>
+                            <path d="M180 17
+                            C195 21, 202 18, 195 14
+                            L180 14 Z"
+                            fill="#ab7037"/>
+                        </g>
+                    </svg>
+                </div>
+                <div class="row">
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card p-3 h-100 bg-transparent position-relative shadow">
+                            <iframe height="315" src="https://www.youtube.com/embed/ZxsfYLXj51A?si=f53QCHosxaBDPCEc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>                    <!-- <div class="overflow-hidden rounded z-3"><img src="imgs/hero-cards (1).webp" class="card-img-top rounded" alt="..."></div> -->
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card p-3 h-100 bg-transparent position-relative shadow">
+                            <iframe height="315" src="https://www.youtube.com/embed/1zzSuQbjLDs?si=7qev3IhitfnTaaqL" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>                    
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card p-3 h-100 bg-transparent position-relative shadow">
+                            <iframe height="315" src="https://www.youtube.com/embed/XDn6ta0lrMk?si=5ZOcXapLBLgOpRLc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>                    
+                        </div>
+                    </div>
+                </div>
+                <button class="btn main-btn fw-bold px-4 mt-3">أعرض المزيد</button>
+            </div>
+        </section>
+
+
+        <footer>
+            <div class="container">
+                <div class="row position-relative">
+                    <div class="logo-side col-12 col-md-6 col-lg-3">
+                        <div class="position-relative">
+                            <a class="navbar-brand d-flex align-items-center" href="/home.html">
+                                <img src="imgs/logo.webp" alt="شعار مسابقات الرماية السنوية" class="logo"/>
+                                <p class="mb-0 ps-2">
+                                    <span class="d-block">مسابقات الرماية السنوية</span>
+                                    <span>Annual Shooting Competitions</span>
+                                </p>
+                            </a>
+                            <p class="mt-2 mb-0">
+                                تنظم قيادة الوحدات المساندة مسابقات الرماية السنوية الرابع عشر لعام 2026/2025 والتي تعد من أهم المسابقات الرائدة في الدولة...
+                                <a href="#" class="main-links card-link fw-bold">أقرأ المزيد</a>
+                            </p>
+                            <div class="visitors-num p-2 mt-2 text-white text-center">
+                                <i class="fa-solid fa-user"></i>
+                                <span>عدد الـزوار:</span>
+                                <span class="fw-bold">268653</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="links-side col-12 col-md-6 col-lg-3">
+                        <div class="heading mb-3 text-center">
+                            <h2 class="fw-bold position-relative mb-0 fs-6 ms-4">روابط سريعة</h2>
+                            <svg width="130" height="24" viewBox="0 0 130 24" xmlns="http://www.w3.org/2000/svg" class="position-relative">
+                                <rect x="10" y="11" width="80" height="2" rx="1" fill="#ab7037"/>
+                                <rect x="90" y="7" width="16" height="10" rx="2" fill="#ab7037"/>
+                                <path d="M106 17
+                                    C116 21, 120 18, 116 14
+                                    L106 14 Z"
+                                    fill="#ab7037"/>
+                            </svg>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <ul class="position-relative">
+                                <li>
+                                    <a href="#" class="main-links fw-bold d-flex align-items-center">
+                                        <svg width="18" height="18" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" class="target-icon ms-2 position-relative me-1">
+                                            <circle cx="32" cy="32" r="28" stroke="currentColor" stroke-width="3" fill="none"/>
+                                            <circle cx="32" cy="32" r="16" stroke="currentColor" stroke-width="3" fill="none"/>
+                                            <circle cx="32" cy="32" r="6" fill="currentColor"/>
+                                            <line x1="32" y1="2" x2="32" y2="14" stroke="currentColor" stroke-width="2"/>
+                                            <line x1="32" y1="50" x2="32" y2="62" stroke="currentColor" stroke-width="2"/>
+                                            <line x1="2" y1="32" x2="14" y2="32" stroke="currentColor" stroke-width="2"/>
+                                            <line x1="50" y1="32" x2="62" y2="32" stroke="currentColor" stroke-width="2"/>
+                                        </svg>
+                                        الرئيسية
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="main-links fw-bold d-flex align-items-center">
+                                        <svg width="18" height="18" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" class="target-icon ms-2 position-relative me-1">
+                                            <circle cx="32" cy="32" r="28" stroke="currentColor" stroke-width="3" fill="none"/>
+                                            <circle cx="32" cy="32" r="16" stroke="currentColor" stroke-width="3" fill="none"/>
+                                            <circle cx="32" cy="32" r="6" fill="currentColor"/>
+                                            <line x1="32" y1="2" x2="32" y2="14" stroke="currentColor" stroke-width="2"/>
+                                            <line x1="32" y1="50" x2="32" y2="62" stroke="currentColor" stroke-width="2"/>
+                                            <line x1="2" y1="32" x2="14" y2="32" stroke="currentColor" stroke-width="2"/>
+                                            <line x1="50" y1="32" x2="62" y2="32" stroke="currentColor" stroke-width="2"/>
+                                        </svg>
+                                        المسابقات
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="main-links fw-bold d-flex align-items-center">
+                                        <svg width="18" height="18" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" class="target-icon ms-2 position-relative me-1">
+                                            <circle cx="32" cy="32" r="28" stroke="currentColor" stroke-width="3" fill="none"/>
+                                            <circle cx="32" cy="32" r="16" stroke="currentColor" stroke-width="3" fill="none"/>
+                                            <circle cx="32" cy="32" r="6" fill="currentColor"/>
+                                            <line x1="32" y1="2" x2="32" y2="14" stroke="currentColor" stroke-width="2"/>
+                                            <line x1="32" y1="50" x2="32" y2="62" stroke="currentColor" stroke-width="2"/>
+                                            <line x1="2" y1="32" x2="14" y2="32" stroke="currentColor" stroke-width="2"/>
+                                            <line x1="50" y1="32" x2="62" y2="32" stroke="currentColor" stroke-width="2"/>
+                                        </svg>
+                                        من أقوال القائد
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="main-links fw-bold d-flex align-items-center">
+                                        <svg width="18" height="18" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" class="target-icon ms-2 position-relative me-1">
+                                            <circle cx="32" cy="32" r="28" stroke="currentColor" stroke-width="3" fill="none"/>
+                                            <circle cx="32" cy="32" r="16" stroke="currentColor" stroke-width="3" fill="none"/>
+                                            <circle cx="32" cy="32" r="6" fill="currentColor"/>
+                                            <line x1="32" y1="2" x2="32" y2="14" stroke="currentColor" stroke-width="2"/>
+                                            <line x1="32" y1="50" x2="32" y2="62" stroke="currentColor" stroke-width="2"/>
+                                            <line x1="2" y1="32" x2="14" y2="32" stroke="currentColor" stroke-width="2"/>
+                                            <line x1="50" y1="32" x2="62" y2="32" stroke="currentColor" stroke-width="2"/>
+                                        </svg>
+                                        أنواع المسابقات
+                                    </a>
+                                </li>
+                            </ul>
+                            <ul class="position-relative">
+                                <li>
+                                    <a href="#" class="main-links fw-bold d-flex align-items-center">
+                                        <svg width="18" height="18" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" class="target-icon ms-2 position-relative me-1">
+                                            <circle cx="32" cy="32" r="28" stroke="currentColor" stroke-width="3" fill="none"/>
+                                            <circle cx="32" cy="32" r="16" stroke="currentColor" stroke-width="3" fill="none"/>
+                                            <circle cx="32" cy="32" r="6" fill="currentColor"/>
+                                            <line x1="32" y1="2" x2="32" y2="14" stroke="currentColor" stroke-width="2"/>
+                                            <line x1="32" y1="50" x2="32" y2="62" stroke="currentColor" stroke-width="2"/>
+                                            <line x1="2" y1="32" x2="14" y2="32" stroke="currentColor" stroke-width="2"/>
+                                            <line x1="50" y1="32" x2="62" y2="32" stroke="currentColor" stroke-width="2"/>
+                                        </svg>
+                                        التسجيل للمشاركة في المسابقات
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="main-links fw-bold d-flex align-items-center">
+                                        <svg width="18" height="18" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" class="target-icon ms-2 position-relative me-1">
+                                            <circle cx="32" cy="32" r="28" stroke="currentColor" stroke-width="3" fill="none"/>
+                                            <circle cx="32" cy="32" r="16" stroke="currentColor" stroke-width="3" fill="none"/>
+                                            <circle cx="32" cy="32" r="6" fill="currentColor"/>
+                                            <line x1="32" y1="2" x2="32" y2="14" stroke="currentColor" stroke-width="2"/>
+                                            <line x1="32" y1="50" x2="32" y2="62" stroke="currentColor" stroke-width="2"/>
+                                            <line x1="2" y1="32" x2="14" y2="32" stroke="currentColor" stroke-width="2"/>
+                                            <line x1="50" y1="32" x2="62" y2="32" stroke="currentColor" stroke-width="2"/>
+                                        </svg>
+                                        المسابقات والإعلام
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="main-links fw-bold d-flex align-items-center">
+                                        <svg width="18" height="18" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" class="target-icon ms-2 position-relative me-1">
+                                            <circle cx="32" cy="32" r="28" stroke="currentColor" stroke-width="3" fill="none"/>
+                                            <circle cx="32" cy="32" r="16" stroke="currentColor" stroke-width="3" fill="none"/>
+                                            <circle cx="32" cy="32" r="6" fill="currentColor"/>
+                                            <line x1="32" y1="2" x2="32" y2="14" stroke="currentColor" stroke-width="2"/>
+                                            <line x1="32" y1="50" x2="32" y2="62" stroke="currentColor" stroke-width="2"/>
+                                            <line x1="2" y1="32" x2="14" y2="32" stroke="currentColor" stroke-width="2"/>
+                                            <line x1="50" y1="32" x2="62" y2="32" stroke="currentColor" stroke-width="2"/>
+                                        </svg>
+                                        النشرات اليومية
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="main-links fw-bold d-flex align-items-center">
+                                        <svg width="18" height="18" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" class="target-icon ms-2 position-relative me-1">
+                                            <circle cx="32" cy="32" r="28" stroke="currentColor" stroke-width="3" fill="none"/>
+                                            <circle cx="32" cy="32" r="16" stroke="currentColor" stroke-width="3" fill="none"/>
+                                            <circle cx="32" cy="32" r="6" fill="currentColor"/>
+                                            <line x1="32" y1="2" x2="32" y2="14" stroke="currentColor" stroke-width="2"/>
+                                            <line x1="32" y1="50" x2="32" y2="62" stroke="currentColor" stroke-width="2"/>
+                                            <line x1="2" y1="32" x2="14" y2="32" stroke="currentColor" stroke-width="2"/>
+                                            <line x1="50" y1="32" x2="62" y2="32" stroke="currentColor" stroke-width="2"/>
+                                        </svg>
+                                        معرض المسابقات
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="contacts-side col-12 col-md-6 col-lg-3">
+                        <div class="heading mb-3 text-center">
+                            <h2 class="fw-bold position-relative mb-0 fs-6">اتصل بنا</h2>
+                            <svg width="90" height="24" viewBox="0 0 90 24" xmlns="http://www.w3.org/2000/svg" class="position-relative rotated-heading-icon">
+                                <rect x="6" y="11" width="48" height="2" rx="1" fill="#ab7037"/>
+                                <rect x="54" y="8" width="14" height="8" rx="2" fill="#ab7037"/>
+                                <path d="M68 16
+                                    C76 19, 80 17, 76 14
+                                    L68 14 Z"
+                                    fill="#ab7037"/>
+                            </svg>
+                        </div>
+                        <div class="contacts mx-auto">
+                            <ul>
+                                <li>
+                                    <div class="main-links fw-bold d-flex justify-content-start align-items-center gap-1">
+                                        <i class="fa-solid fa-phone fs-4"></i>
+                                        <div>
+                                            <a href="tel:+0509995267">0509995267 لتواصل النساء</a><br/>
+                                            <a href="tel:+0566803261">0566803261 لتواصل الرجال</a>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="main-links fw-bold d-flex justify-content-start align-items-center gap-1">
+                                        <i class="fa-solid fa-envelope fs-4"></i>
+                                        <a href="mailto:info@rmaya.ae">info@rmaya.ae</a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="d-flex align-items-center justify-content-center mb-1 mt-3 gap-2">
+                            <div class="heading">
+                                <h2 class="fw-bold position-relative mb-0 fs-6">تابعونا على:</h2>
+                            </div>
+                            <ul class="navbar-nav social-icons flex-row gap-1">
+                                <li><a href="https://www.instagram.com" target="_blank">
+                                    <i class="fa-brands fa-instagram fa-lg"></i>
+                                </a></li>
+                                <li><a href="https://www.x.com" target="_blank">
+                                    <i class="fa-brands fa-x-twitter fa-lg"></i>
+                                </a></li>
+                                <li><a href="https://www.snapchat.com" target="_blank">
+                                    <i class="fa-brands fa-snapchat fa-lg"></i>
+                                </a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="location-side col-12 col-md-6 col-lg-3 text-center">
+                        <div class="heading mb-3 text-center">
+                            <h2 class="fw-bold position-relative mb-0 fs-6 ms-4">موقعنا على الخريطة</h2>
+                            <svg width="165" height="24" viewBox="0 0 165 24" xmlns="http://www.w3.org/2000/svg" class="position-relative">
+                                <rect x="8" y="11" width="108" height="2" rx="1" fill="#ab7037"/>
+                                <rect x="116" y="8" width="18" height="8" rx="2" fill="#ab7037"/>
+                                <path d="M134 16
+                                    C147 19, 152 17, 147 14
+                                    L134 14 Z"
+                                    fill="#ab7037"/>
+                            </svg>
+                        </div>
+                        <iframe class="rounded" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d116113.49389604182!2d54.729634299246506!3d24.570322606162833!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5e440f723ef2b9%3A0xc7cc2e9341971108!2sAbu%20Dhabi%20-%20United%20Arab%20Emirates!5e0!3m2!1sen!2sus!4v1765978871568!5m2!1sen!2sus"  style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        <div class="mt-2 text-center">موقع المسابقات
+                            <span class="d-block fw-bold mt-1">مجمع الريف للرماية - أبوظبي</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright position-relative text-white py-2 px-2 text-center fw-bold">
+                <p class="mb-0 d-inline">جميع الحقوق محفوظة مسابقات الرماية <span class="copyright-year"></span></p>
+                <p class="mb-0 d-inline">| تصميم وتطوير
+                    <img src="imgs/logo_4.png" />
+                </p>
+            </div>
+        </footer>
+            
+        
+        <div class="scroll-to-top position-fixed d-flex justify-content-center align-items-center">
+            <i class="fa-solid fa-angle-up text-white fs-4"></i>
+        </div>
+
+        <script src="js/bootstrap.bundle.min.js"></script>
+        <script src="js/swiper-bundle.js"></script>
+        <script src="js/main.js"></script>
+    </body>
+</html>
