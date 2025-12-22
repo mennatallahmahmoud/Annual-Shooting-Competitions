@@ -62,13 +62,63 @@ const swiper = new Swiper('.swiper', {
   },
 
   breakpoints: {
-    0: { slidesPerView: 2 },
+    0: { slidesPerView: 1 },
     576: { slidesPerView: 2 },
     768: { slidesPerView: 3 },
     992: { slidesPerView: 4 },
     1200: { slidesPerView: 5 } 
   }
 });
+
+
+
+gsap.registerPlugin(ScrollTrigger);
+
+gsap.to("#welcome-sec", {
+  scrollTrigger: {
+    trigger: "#welcome-sec", 
+    start: "top 80%",
+    toggleActions: "play none none none"
+  },
+  opacity: 1,
+  y: 0,
+  duration: 1,
+  ease: "power2.out"
+});
+gsap.to("#events-sec", {
+  scrollTrigger: {
+    trigger: "#events-sec", 
+    start: "top 80%", 
+    toggleActions: "play none none none"
+  },
+  opacity: 1,
+  y: 0,
+  duration: 1.5,
+  ease: "power2.out"
+});
+gsap.to("#images-sec", {
+  scrollTrigger: {
+    trigger: "#images-sec", 
+    start: "top 80%", 
+    toggleActions: "play none none none"
+  },
+  opacity: 1,
+  x: 0,
+  duration: 1.5,
+  ease: "power2.out"
+});
+gsap.to("#videos-sec", {
+  scrollTrigger: {
+    trigger: "#videos-sec",
+    start: "top 80%",
+    toggleActions: "play none none none"
+  },
+  opacity: 1,
+  y: 0,
+  duration: 1.5,
+  ease: "power2.out"
+});
+
 
 window.addEventListener("scroll", () => {
   if(window.scrollY > 800) {
@@ -86,4 +136,4 @@ scrollToTop.addEventListener("click", () => {
   })
 })
 
-copyrightYear.textContent = `${new Date().getFullYear()} - 2017 ©`
+copyrightYear.textContent = `© ${new Date().getFullYear()} - 2017`
