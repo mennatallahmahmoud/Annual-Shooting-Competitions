@@ -2,7 +2,7 @@ const date = document.getElementById("date")
 const middleMenu = document.querySelector(".middle-menu")
 const mainMenu = document.querySelector(".main-menu")
 const menuLinks = document.querySelectorAll(".main-menu .navbar-nav li a")
-const menuBtn = document.querySelector(".main-menu .navbar-toggler")
+const navBtn = document.querySelector(".main-menu .navbar-toggler")
 const copyrightYear = document.querySelector(".copyright-year")
 const scrollToTop = document.querySelector(".scroll-to-top")
 
@@ -35,6 +35,9 @@ menuLinks.forEach((link) => {
 })
 
 
+navBtn.addEventListener("click", () => {
+  navBtn.classList.toggle("open")
+})
 
 const swiper = new Swiper('.swiper', {
   direction: 'horizontal',
