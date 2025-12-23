@@ -142,8 +142,18 @@ nav {
 .navbar-toggler, .navbar-toggler:focus, .navbar-toggler:focus-visible, .navbar-toggler:focus-within, .navbar-toggler:active {
     box-shadow: none !important;
 }
-.navbar-fa-icon:hover {
-    color: var(--text-color);
+.navbar-toggler i {
+    font-size: 14px;
+    transition: opacity 0.3s;
+}
+.navbar-toggler i:last-child {
+    opacity: 0;
+}
+.navbar-toggler.open i:last-child {
+    opacity: 1;
+}
+.navbar-toggler.open i:first-child {
+    opacity: 0;
 }
 
 /* Hero Section */
@@ -297,21 +307,6 @@ nav {
     opacity: 1 !important;
     height: 100%;
 }
-/* .events-section .card .card-body {
-    max-height: 0;
-    opacity: 0;
-    overflow: hidden;
-    transition: max-height 1s ease, opacity 1s ease, transform 1s ease;
-    transform: translateY(20px);
-}
-.events-section .card:hover .card-body {
-    max-height: 500px;
-    opacity: 1;
-    transform: translateY(0);
-}
-.events-section .card h5 {
-    height: 75px;
-} */
 
 /* Separator */
 
@@ -486,6 +481,9 @@ footer .location-side iframe {
     .middle-menu .navbar-brand span:nth-child(2) {
         font-size: 9px;
     }
+    .main-menu {
+        background-color: var(--main-color) !important;
+    }
     .main-menu ul {
         align-items: flex-start !important;
         position: absolute;
@@ -493,6 +491,8 @@ footer .location-side iframe {
         width: 100%;
         left: 0;
         padding: 10px;
+        margin-top: 8px;
+        box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.15);
     }
     .main-menu > ul {
         height: 100vh;
@@ -503,9 +503,13 @@ footer .location-side iframe {
     .main-menu .dropdown ul {
         box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
     }
+    .navbar-toggler {
+        color: var(--light-color);
+        border-color: var(--light-color);
+    }
     /* Hero Section */
     .hero-section .content div {
-        top: 6%;
+        top: 11%;
         font-size: 12px;
         text-shadow: 1px 1px #5c2e00;
     }
@@ -520,6 +524,14 @@ footer .location-side iframe {
     }
     .hero-cards-section .row {
         gap: 10px 0;
+    }
+    .hero-carousel .carousel-item img {
+        object-fit: cover;
+        height: 200px;
+    }
+    .carousel-control-next-icon, .carousel-control-prev-icon {
+        width: 1rem !important;
+        height: 1rem !important;
     }
     /* Welcome Section */
     .welcome-section {
@@ -632,6 +644,9 @@ footer .location-side iframe {
     }
     .main-menu .dropdown ul {
         box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.15);
+    }
+    .navbar-fa-icon:hover {
+        color: var(--text-color);
     }
     /* Hero Section */
     .hero-cards-section {
