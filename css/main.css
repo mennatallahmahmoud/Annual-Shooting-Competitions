@@ -10,6 +10,7 @@
     --light-color: #F2ECE4;
     --main-color: #3F5D4A;
     --text-color: #2E2620;
+    --secondary-color: #ab7037;
 }
 body {
     position: relative;
@@ -27,10 +28,8 @@ a {
 }
 
 .main-links {
-    color: var(--text-color);
-}
-.main-links:hover {
     color: var(--main-color);
+    font-size: 12px;
 }
 .main-btn {
     background-color: var(--main-color);
@@ -49,7 +48,7 @@ a {
     height: 100%;
     bottom: 50px;
     left: 0;
-    background-color: #ab7037;
+    background-color: var(--secondary-color);
     z-index: 1;
     transition: 0.5s;
 }
@@ -65,12 +64,14 @@ a {
     bottom: 0;
 }
 .target-icon {
-    color: var(--text-color);
+    color: var(--main-color);
     transition: 0.5s;
 }
+.card:hover .target-icon, .card:hover .main-links {
+    color: var(--secondary-color);
+}
 .card:hover .target-icon {
-    transform: scale(1.2);
-    color: var(--main-color);
+    transform: scale(1.1);
 }
 .rotated-heading-icon {
     transform: scaleX(-1);
@@ -97,7 +98,7 @@ nav {
     color: var(--text-color);
 }
 .social-icons li i:hover {
-    color: #ab7037 !important;
+    color: var(--secondary-color) !important;
 }
 .search-form {
     background-color: #f3f3f3;
@@ -111,7 +112,7 @@ nav {
     box-shadow: none !important;
 }
 .middle-menu .search-btn:hover i {
-    color: #ab7037;
+    color: var(--secondary-color);
 }
 .main-menu, .middle-menu {
     background-color: #f3f3f3;
@@ -298,12 +299,10 @@ nav {
     filter: blur(3px);
 }
 .events-section .card:hover .card-body {
+    width: 100%;
     opacity: 1;
 }
-.events-section .card:hover .card-body .text {
-    transform: translateY(0);
-}
-.events-section .card:hover .card-body button {
+.events-section .card:hover .card-body .text, .events-section .card:hover .card-body button  {
     transform: translateY(0);
 }
 
@@ -410,16 +409,16 @@ footer .main-links {
     color: var(--text-color);
 }
 footer .contacts-side .main-links a {
-    font-size: 12px;
+    font-size: 10px;
 }
 footer .main-links a {
     color: var(--text-color);
 }
 footer .contacts .main-links i {
-    color: #ab7037;
+    color: var(--secondary-color);
 }
 footer .main-links:hover, footer .main-links a:hover {
-    color: #ab7037;
+    color: var(--secondary-color);
 }
 footer .links-side, footer .contacts-side, footer .location-side {
     margin-top: 24px;
@@ -456,7 +455,7 @@ footer .location-side iframe {
     right: 50px;
 }
 .scroll-to-top:hover {
-    background-color: #ab7037;
+    background-color: var(--secondary-color);
 }
 
 
@@ -576,7 +575,7 @@ footer .location-side iframe {
     }
     /* Images Section */
     .swiper {
-        height: 300px;
+        height: 320px;
     }
     .carousel-indicators {
         margin-bottom: 0px !important;
@@ -767,16 +766,16 @@ footer .location-side iframe {
     }
     /* Footer */
     footer .logo {
-        width: 70px;
+        width: 50px;
     }
     footer .logo-side p {
-        font-size: 14px;
+        font-size: 12px;
     }
     footer .navbar-brand span:first-child {
-        font-size: 18px;
+        font-size: 14px;
     }
     footer .navbar-brand span:nth-child(2) {
-        font-size: 13px;
+        font-size: 11px;
     }
 }
 
