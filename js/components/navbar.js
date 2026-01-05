@@ -7,11 +7,11 @@ class AppNavbar extends HTMLElement {
                 <div class="register d-flex justify-content-center align-items-center">
                     <button class="btn overflow-hidden d-flex gap-1 align-items-center justify-content-between border-0 mx-auto p-2">
                         <i class="fa-solid fa-right-to-bracket fa-xs text-white"></i>
-                        <a href="/login.html" class="main-links card-link fw-bold text-white">تسجيل الدخول</a>
+                        <a href="login.html" class="main-links card-link fw-bold text-white">تسجيل الدخول</a>
                     </button>
                     <button class="btn overflow-hidden d-flex gap-1 align-items-center justify-content-between border-0 mx-auto p-2">
                         <i class="fa-solid fa-user-plus fa-xs text-white"></i>
-                        <a href="/register.html" class="main-links card-link fw-bold text-white">حساب جديد</a>
+                        <a href="register.html" class="main-links card-link fw-bold text-white">حساب جديد</a>
                     </button>
                 </div>
                 <p id="date" class="text-white mb-0"></p>
@@ -128,10 +128,10 @@ class AppNavbar extends HTMLElement {
                         </li>
                         <hr class="w-100 d-md-none">
                         <li class="nav-item register-btns-small-screen d-md-none">
-                            <a href="/login.html" class="dropdown-item menu-links nav-link card-link fw-bold p-0">تسجيل الدخول</a>
+                            <a href="login.html" class="dropdown-item menu-links nav-link card-link fw-bold p-0">تسجيل الدخول</a>
                         </li>
                         <li class="nav-item register-btns-small-screen d-md-none">
-                            <a href="/register.html" class="dropdown-item menu-links nav-link card-link fw-bold">حساب جديد</a>
+                            <a href="register.html" class="dropdown-item menu-links nav-link card-link fw-bold">حساب جديد</a>
                         </li>
                     </ul>
                 </div>
