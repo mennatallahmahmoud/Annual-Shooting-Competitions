@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>تسجيل حساب جديد</title>
+        <link rel="icon" href="imgs/logo.webp"/>
+        <link rel="stylesheet" href="css/bootstrap.rtl.css"/>
+        <link rel="stylesheet" href="css/bootstrap.rtl.min.css"/>
+        <link rel="stylesheet" href="css/css/all.min.css"/>
+        <link rel="stylesheet" href="css/css/all.css"/>
+        <link rel="stylesheet" href="css/main.css"/>
+    </head>
+    <body>
+        <app-navbar></app-navbar>
+
+        <main class="register-pg position-relative d-flex justify-content-center align-items-center">
+            <div class="register-img position-absolute"></div>
+            <div class="container">
+                <div class="register-header row mb-3">
+                    <div class="breadcrumb d-flex align-items-center col-12 col-lg-4 mb-0">
+                        <a href="index.html">
+                            <i class="fa-solid fa-house fa-lg"></i>
+                            الرئيسية</a>
+                        <i class="fa-solid fa-angle-left fa-xs mt-1 d-md-none"></i>
+                        <i class="fa-solid fa-angle-left fa-sm mt-1 d-none d-md-block"></i>
+                        <button class="border-0 bg-transparent">تسجيل جديد</button>
+                    </div>
+                    <div class="heading text-center col-12 col-lg-8">
+                        <h2 class="fw-bold position-relative mb-0">تسجيل جديد</h2>
+                        <svg width="270" height="24" viewBox="0 0 270 24" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="40" y="11" width="180" height="2" rx="1" fill="#ab7037"/>
+                            <rect x="220" y="7" width="20" height="10" rx="2" fill="#ab7037"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="register-form row position-relative">
+                    <div class="right-side col-12 col-md-6 d-none d-md-flex p-0 position-relative d-flex justify-content-center align-items-center fw-bold text-center text-white">
+                        <p class="position-relative z-4 mb-0">انضم إلى مسابقات الرماية السنوية<br/>وساهم في مسيرة التميّز الوطني</p>
+                    </div>
+                    <form class="left-side col-12 col-md-6 text-center">
+                        <div class="entity mb-4">
+                            <span class="d-block mb-3 text-decoration-underline fw-bold">الجهة</span>
+                            <div class="radio-btns-signup d-flex justify-content-evenly flex-column flex-md-row wrap mb-3">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="radioDefault" id="government" checked>
+                                    <label class="form-check-label" for="government">حكومي</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="radioDefault" id="non-profit">
+                                    <label class="form-check-label" for="non-profit">جمعيات</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="radioDefault" id="private">
+                                    <label class="form-check-label" for="private">مؤسسات خاصة</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="radioDefault" id="individual">
+                                    <label class="form-check-label" for="individual">فردي</label>
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-center align-items-center flex-column flex-lg-row gap-2">
+                                <div class="position-relative w-100 mb-2">
+                                    <label for="entity-name" class="form-label d-block text-start">اسم الجهة</label>
+                                    <input type="text" class="form-control text-start" id="entity-name" placeholder="جمعية...." required>
+                                    <svg width="16" height="16" viewBox="0 0 384 512" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="input-icon position-absolute">
+                                        <path fill="#c19870"
+                                        d="M48 0C21.5 0 0 21.5 0 48V464c0 26.5 21.5 48 48 48H336c26.5 0 48-21.5 48-48V48c0-26.5-21.5-48-48-48H48zm48 96h48v48H96V96zm0 96h48v48H96v-48zm0 96h48v48H96v-48zm96-192h48v48h-48V96zm0 96h48v48h-48v-48zm0 96h48v48h-48v-48zm96-192h48v48h-48V96zm0 96h48v48h-48v-48zm0 96h48v48h-48v-48z"/>
+                                    </svg>
+                                </div>
+                                <div class="position-relative w-100 mb-2">
+                                    <label for="tax-num" class="form-label d-block text-start">الرقم الضريبي</label>
+                                    <input type="number" class="form-control text-start" id="tax-num" placeholder="123456789" required>
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="#c19870" class="input-icon position-absolute"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                        <rect x="3" y="4" width="18" height="16" rx="2" stroke="#c19870" stroke-width="2"/>
+                                        <line x1="7" y1="9" x2="17" y2="9" stroke="white" stroke-width="2"/>
+                                        <line x1="7" y1="13" x2="13" y2="13" stroke="white" stroke-width="2"/>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="responsible-person mb-4">
+                            <span class="d-block mb-3 text-decoration-underline fw-bold">بيانات الشخص المسئول</span>
+                            <div class="mb-3 position-relative">
+                                <label for="responsible-person-name" class="form-label d-block text-start">اسم الشخص المسئول</label>
+                                <input type="text" class="form-control text-start" id="responsible-person-name" placeholder="الاسم الكامل للمسئول" required>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="#c19870" xmlns="http://www.w3.org/2000/svg" class="input-icon position-absolute">
+                                    <circle cx="12" cy="7" r="4" stroke="#c19870" stroke-width="2"/>
+                                    <path d="M4 21c0-4 4-6 8-6s8 2 8 6" stroke="#c19870" stroke-width="2"/>
+                                </svg>
+                            </div>
+                            <div class="d-flex justify-content-center align-items-center flex-column flex-lg-row gap-2"> 
+                                <div class="position-relative w-100 mb-2">
+                                    <label for="responsible-person-job" class="form-label d-block text-start">الوظيفة</label>
+                                    <input type="text" class="form-control text-start" id="responsible-person-job" placeholder="المسمى الوظيفي" required>
+                                    <svg width="16" height="16" viewBox="0 0 24 24" class="input-icon position-absolute"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path fill="#c19870"
+                                            d="M10 2h4a2 2 0 0 1 2 2v2h4a2 2 0 0 1 2 2v11
+                                            a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8
+                                            a2 2 0 0 1 2-2h4V4a2 2 0 0 1 2-2zm0 4h4V4h-4v2z"/>
+                                    </svg>
+                                </div>
+                                <div class="position-relative w-100 mb-2">
+                                    <label for="responsible-person-phone-num" class="form-label d-block text-start">رقم التليفون</label>
+                                    <input type="number" class="form-control text-start" id="responsible-person-phone-num" placeholder="055xxxxxx" required>
+                                    <svg width="16" height="16" viewBox="0 0 24 24" class="input-icon position-absolute"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path fill="#c19870"
+                                            d="M6.6 10.8a15.5 15.5 0 0 0 6.6 6.6l2.2-2.2
+                                            a1 1 0 0 1 1-.24l3.5 1
+                                            a1 1 0 0 1 .72.95V20
+                                            a2 2 0 0 1-2 2
+                                            C10.3 22 2 13.7 2 3
+                                            a2 2 0 0 1 2-2h3.5
+                                            a1 1 0 0 1 .95.72l1 3.5
+                                            a1 1 0 0 1-.24 1L6.6 10.8z"/>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="login-credentials">
+                            <span class="d-block mb-3 text-decoration-underline fw-bold">بيانات الدخول</span>
+                            <div class="mb-3 position-relative">
+                                <label for="signup-email" class="form-label d-block text-start">البريد الإلكتروني</label>
+                                <input type="email" class="signup-email-input form-control text-start" id="signup-email" aria-describedby="emailHelp" placeholder="example@email.com" required autocomplete="email">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#c19870" class="bi bi-envelope-fill input-icon position-absolute" viewBox="0 0 16 16">
+                                    <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414zM0 4.697v7.104l5.803-3.558zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586zm3.436-.586L16 11.801V4.697z"/>
+                                </svg>
+                            </div>
+                            <div class="d-flex flex-column flex-lg-row align-items-center gap-2">
+                                <div class="position-relative w-100 mb-4">
+                                    <label for="signup-password" class="form-label d-block text-start">كلمة المرور</label>
+                                    <input type="password" class="signup-pass-input form-control" id="signup-password" placeholder="••••••••" required autocomplete="new-password" minlength="8" maxlength="100">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#c19870" class="bi bi-lock-fill input-icon position-absolute" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd" d="M8 0a4 4 0 0 1 4 4v2.05a2.5 2.5 0 0 1 2 2.45v5a2.5 2.5 0 0 1-2.5 2.5h-7A2.5 2.5 0 0 1 2 13.5v-5a2.5 2.5 0 0 1 2-2.45V4a4 4 0 0 1 4-4m0 1a3 3 0 0 0-3 3v2h6V4a3 3 0 0 0-3-3"/>
+                                    </svg>
+                                    <button type="button" class="show-pass-btn position-absolute border-0 bg-transparent">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-eye-fill show-pass-icon " viewBox="0 0 16 16">
+                                            <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0"/>
+                                            <path d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8m8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7"/>
+                                        </svg>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-eye-slash-fill hide-pass-icon d-none"  viewBox="0 0 16 16">
+                                            <path d="m10.79 12.912-1.614-1.615a3.5 3.5 0 0 1-4.474-4.474l-2.06-2.06C.938 6.278 0 8 0 8s3 5.5 8 5.5a7 7 0 0 0 2.79-.588M5.21 3.088A7 7 0 0 1 8 2.5c5 0 8 5.5 8 5.5s-.939 1.721-2.641 3.238l-2.062-2.062a3.5 3.5 0 0 0-4.474-4.474z"/>
+                                            <path d="M5.525 7.646a2.5 2.5 0 0 0 2.829 2.829zm4.95.708-2.829-2.83a2.5 2.5 0 0 1 2.829 2.829zm3.171 6-12-12 .708-.708 12 12z"/>
+                                        </svg>
+                                    </button>
+                                    <span class="pass-alert position-absolute">8 أحرف وأرقام ورمز واحد علي الأقل</span>
+                                </div>
+                                <div class="position-relative w-100 mb-4">
+                                    <label for="confirm-signup-password" class="form-label d-block text-start">تأكيد كلمة المرور</label>
+                                    <input type="password" class="confirm-signup-pass-input form-control" id="confirm-signup-password" placeholder="••••••••" required autocomplete="new-password" minlength="8" maxlength="100">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#c19870" class="bi bi-lock-fill input-icon position-absolute" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd" d="M8 0a4 4 0 0 1 4 4v2.05a2.5 2.5 0 0 1 2 2.45v5a2.5 2.5 0 0 1-2.5 2.5h-7A2.5 2.5 0 0 1 2 13.5v-5a2.5 2.5 0 0 1 2-2.45V4a4 4 0 0 1 4-4m0 1a3 3 0 0 0-3 3v2h6V4a3 3 0 0 0-3-3"/>
+                                    </svg>
+                                    <button type="button" class="show-pass-btn position-absolute border-0 bg-transparent">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-eye-fill show-pass-icon " viewBox="0 0 16 16">
+                                            <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0"/>
+                                            <path d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8m8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7"/>
+                                        </svg>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-eye-slash-fill hide-pass-icon d-none"  viewBox="0 0 16 16">
+                                            <path d="m10.79 12.912-1.614-1.615a3.5 3.5 0 0 1-4.474-4.474l-2.06-2.06C.938 6.278 0 8 0 8s3 5.5 8 5.5a7 7 0 0 0 2.79-.588M5.21 3.088A7 7 0 0 1 8 2.5c5 0 8 5.5 8 5.5s-.939 1.721-2.641 3.238l-2.062-2.062a3.5 3.5 0 0 0-4.474-4.474z"/>
+                                            <path d="M5.525 7.646a2.5 2.5 0 0 0 2.829 2.829zm4.95.708-2.829-2.83a2.5 2.5 0 0 1 2.829 2.829zm3.171 6-12-12 .708-.708 12 12z"/>
+                                        </svg>
+                                    </button>
+                                    <span class="pass-alert matches-pass-alert d-none position-absolute">كلمة المرور غير متطابقة</span>
+                                </div>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn main-btn submit-btn d-block mx-auto mt-4 fw-bold overflow-hidden"><span>تسجيل حساب جديد</span></button>
+                    </form>
+                </div>
+            </div>
+        </main>
+
+        <app-footer></app-footer>
+        
+        <script src="js/bootstrap.bundle.min.js"></script>
+        <script src="js/gsap.min.js"></script>
+        <script src="js/components/navbar.js"></script>
+        <script src="js/components/footer.js"></script>
+        <script src="js/register.js"></script>
+        <script src="js/main.js"></script>
+    </body>
+</html>

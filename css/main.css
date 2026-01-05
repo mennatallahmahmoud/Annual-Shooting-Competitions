@@ -31,7 +31,9 @@ a {
     color: var(--main-color);
     font-size: 12px;
 }
-.main-btn {
+
+
+/* .main-btn {
     background-color: var(--main-color);
     color: white;
     position: relative;
@@ -52,16 +54,48 @@ a {
     z-index: 1;
     transition: 0.5s;
 }
-.main-btn span, .main-btn a, .main-btn svg {
-    position: relative;
-    z-index: 5;
-}
 .main-btn:hover {
     padding-left: 32px !important;
     padding-right: 32px !important;
 }
 .main-btn:hover::before {
     bottom: 0;
+} */
+.main-btn {
+  color: var(--secondary-color);
+  text-transform: uppercase;
+  text-decoration: none;
+  border: 2px solid var(--secondary-color);
+  padding: 6px 14px;
+  font-size: 17px;
+  cursor: pointer;
+  font-weight: bold;
+  background: transparent;
+  position: relative;
+  transition: all 1s;
+  overflow: hidden;
+}
+.main-btn:hover {
+  color: white;
+}
+.main-btn::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 0%;
+  top: 0;
+  left: -40px;
+  transform: skewX(45deg);
+  background-color: var(--secondary-color);
+  z-index: 1;
+  transition: all 1s;
+}
+.main-btn:hover::before {
+  width: 160%;
+}
+.main-btn span, .main-btn a, .main-btn svg {
+    position: relative;
+    z-index: 5;
 }
 .target-icon {
     color: var(--main-color);
@@ -85,11 +119,8 @@ nav {
 .sub-menu {
     background-color: var(--main-color);
 }
-.sub-menu button:hover {
-    color: var(--main-color);
-}
-.sub-menu button:active {
-    border: none;
+.sub-menu .register button:hover a , .sub-menu .register button:hover i {
+    color: #e79549 !important;
 }
 .middle-menu-side {
     gap: 20px;
@@ -141,7 +172,7 @@ nav {
     font-size: 14px;
     font-weight: bold;
 }
-.main-menu .navbar-nav li .nav-link.active, .main-menu .navbar-nav li .nav-link:hover {
+.main-menu .navbar-nav li .nav-link.active, .main-menu .navbar-nav li .nav-link:hover, .main-menu .register-btns-small-screen {
     color: var(--text-color) !important;
 }
 .navbar-toggler, .navbar-toggler:focus, .navbar-toggler:focus-visible, .navbar-toggler:focus-within, .navbar-toggler:active {
@@ -160,7 +191,11 @@ nav {
 .navbar-toggler.open i:first-child {
     opacity: 0;
 }
-
+/* .register-btns-small-screen:nth-last-child(2) {
+    border-top: 1px solid rgba(0, 0, 0, 0.65);
+    margin-top: 20px;
+    padding-top: 20px;
+} */
 /* Hero Section */
 
 .hero-section {
@@ -325,6 +360,9 @@ nav {
     left: 0;
     background-color: #00000073;
 }
+.separator button {
+    background-color: #f3f3f3;
+}
 
 /* Images Section */
 
@@ -467,6 +505,133 @@ footer .location-side iframe {
   100% {
     transform: scale(1.3);
   }
+}
+
+
+
+
+/* Login Page */
+
+
+.register-img {
+    background-image: url("../imgs/register-bg.webp");
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    opacity: 0.3;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+.register-header .breadcrumb {
+    width: fit-content;
+}
+.register-header .breadcrumb > i {
+    margin-bottom: 2px;
+}
+.register-header a, .register-header button {
+    color: var(--text-color);
+    font-size: 12px;
+    padding: 0;
+}
+.register-header button {
+    cursor: auto;
+}
+.register-header a:hover {
+    color: var(--secondary-color);
+}
+.login-pg .login-form, .register-form {
+    margin: 30px 0;
+    transform-style: preserve-3d;
+    background-image: url("../imgs/register.jpg");
+    background-position: center;
+    background-size: cover;
+    border-radius: 6px;
+    overflow: hidden;
+}
+.login-pg .container, .register-pg .container {
+  perspective: 1200px;
+  overflow: hidden;
+}
+.login-form::before, .register-form::before {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: #000000c9;
+}
+.login-pg .login-form .right-side, .register-pg .register-form .left-side {
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+    background-color: #f3f3f3db;
+    border-left: 1px solid #e3e3e3;
+    z-index: 10;
+}
+.login-pg .login-form form input, .forget-pass-pg .forget-pass-form input, .register-pg .register-form input:not([type="radio"]) {
+    padding-right: 35px;
+}
+.login-pg .login-form .right-side input:focus, .forget-pass-pg .forget-pass-form input:focus, .register-pg .register-form input:not([type="radio"]):focus {
+    border-color: var(--secondary-color);
+    box-shadow: 0 0 0 .25rem rgb(171 112 55 / 32%);
+}
+.login-pg .login-form .right-side input:focus-visible, .forget-pass-pg .forget-pass-form input:focus-visible {
+    outline: none;
+}
+.login-pg .login-form form svg, .forget-pass-pg .forget-pass-form svg, .register-pg .register-form svg {
+    top: 62%;
+}
+.login-pg .login-form form .show-pass-btn, .register-pg .register-form .show-pass-btn {
+    top: 55%;
+    left: 10px;
+    opacity: 0.5;
+    cursor: pointer;
+    z-index: 100;
+}
+.login-pg .login-form form .forget-pass {
+    color: #212529;
+    font-size: 11px;
+}
+.login-pg .login-form form .forget-pass:hover {
+    color: var(--secondary-color);
+}
+.login-pg .main-btn, .forget-pass-pg .main-btn, .register-pg .register-form form .main-btn {
+    font-size: 14px;
+}
+.login-pg .login-form .left-side img {
+    max-width: 100%;
+    opacity: 0.6;
+}
+
+
+/* Forget Password Page */
+.forget-pass-pg .forget-pass-form {
+    min-height: 20vh;
+}
+.forget-pass-pg .forget-pass-form > div {
+    flex-basis: 50%;
+    width: 100%;
+}
+
+
+/* Register Page */
+.register-pg .register-form .radio-btns-signup {
+    align-items: center;
+}
+.register-pg .form-check-input:checked {
+    background-color: var(--secondary-color) !important;
+    border-color: var(--secondary-color) !important;
+}
+.register-pg .form-check-input:focus {
+    border-color: var(--secondary-color) !important;
+    box-shadow: 0 0 0 .25rem rgb(171 112 55 / 20%) !important;
+}
+.register-pg .register-form .pass-alert {
+    right: 5px;
+    font-size: 10px;
+    color: rgb(190, 0, 0);
+    padding-top: 6px;
 }
 
 
@@ -617,6 +782,46 @@ footer .location-side iframe {
         height: 30px;
         font-size: 18px;
     }
+
+
+
+    /* Login Page */
+
+    .login-pg .container, .forget-pass-pg .container, .register-pg .container {
+        padding: 40px 20px;
+    }
+    .register-header .breadcrumb {
+        margin-bottom: 20px !important;
+    }
+    .register-header a, .register-header button {
+        font-size: 10px;
+    }
+    .login-pg .login-form .right-side, .register-pg .register-form .left-side {
+        padding: 20px !important;
+    }
+    .login-pg .login-form .right-side label, .forget-pass-pg form label, .register-pg .register-form label {
+        font-size: 12px;
+    }
+    .login-pg .login-form form input, .forget-pass-pg form input, .register-pg .register-form input:not([type="radio"]) {
+        font-size: 14px;
+    }
+    .login-pg .login-form form .input-icon, .forget-pass-pg .forget-pass-form .input-icon, .register-pg .register-form .input-icon {
+        right: 4%;
+    }
+    
+    /* Forget Password Page */
+    .forget-pass-pg .forget-pass-form > button {
+        margin-top: 1rem;
+    }
+
+    /* Register Page */
+    .register-pg .register-form .radio-btns-signup {
+        align-items: flex-start;
+    }
+    .register-pg .register-form .pass-alert {
+        font-size: 8px !important;
+    }
+    
 }
 
 /* Medium Screen */
@@ -723,6 +928,48 @@ footer .location-side iframe {
         height: 30px;
         font-size: 18px;
     }
+
+
+    
+    /* Login Page */
+
+    .login-pg .container, .forget-pass-pg .container, .register-pg .container {
+        padding: 60px 20px;
+    }
+    .register-header .breadcrumb {
+        margin-bottom: 20px !important;
+    }
+    .login-pg .login-form .right-side, .register-pg .register-form .left-side {
+        padding: 20px !important;
+    }
+    .login-pg .login-form .right-side label, .register-pg .register-form label {
+        font-size: 12px;
+    }
+    .login-pg .login-form form input, .register-pg .register-form input:not([type="radio"]) {
+        font-size: 14px;
+    }
+    .login-pg .login-form form .input-icon, .register-pg .register-form .input-icon {
+        right: 4%;
+    }
+    .forget-pass-pg .forget-pass-form .input-icon {
+        right: 2%;
+    }
+    .login-pg .login-form .left-side, .register-pg .register-form .right-side {
+        font-size: 16px;
+    }
+
+    /* Forget Password Page */
+    .forget-pass-pg .forget-pass-form > div {
+        margin-left: 16px;
+    }
+    .forget-pass-pg .forget-pass-form > button {
+        margin-top: 2rem;
+    }
+
+    /* Register Page */
+    .register-pg .register-form .pass-alert {
+        font-size: 8px !important;
+    }
 }
 
 /* Large Screen */
@@ -777,5 +1024,35 @@ footer .location-side iframe {
     footer .navbar-brand span:nth-child(2) {
         font-size: 11px;
     }
-}
 
+    /* Login Page */
+    .login-pg .container, .register-pg .container {
+        padding: 60px 20px;
+    }
+    .login-pg .login-form .right-side, .register-pg .register-form .left-side {
+        padding: 48px;
+    }
+    .login-pg .login-form .right-side label, .register-pg .register-form label {
+        font-size: 14px;
+    }
+    .login-pg .login-form form .input-icon, .register-pg .register-form .input-icon {
+        right: 2%;
+    }
+    .forget-pass-pg .forget-pass-form .input-icon {
+        right: 1.5%;
+    }
+    .login-pg .login-form .left-side, .register-pg .register-form .right-side {
+        font-size: 22px;
+    }
+
+    /* Forget Password Page */
+    .forget-pass-pg .container {
+        padding: 60px;
+    }
+    .forget-pass-pg .forget-pass-form > div {
+        margin-left: 16px;
+    }
+    .forget-pass-pg .forget-pass-form > button {
+        margin-top: 2rem;
+    }
+}
