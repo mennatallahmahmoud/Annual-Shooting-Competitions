@@ -12,9 +12,19 @@
         <link rel="stylesheet" href="css/main.css"/>
     </head>
     <body>
-        <app-navbar></app-navbar>
+        <nav class="navbar login-navbar navbar-expand-lg p-0 middle-menu position-relative">
+            <div class="container position-relative py-1">
+                <a class="navbar-brand d-flex align-items-center" href="index.html">
+                    <img src="imgs/logo.webp" alt="شعار مسابقات الرماية السنوية" class="logo"/>
+                    <p class="mb-0 ps-2">
+                        <span class="d-block">مسابقات الرماية السنوية</span>
+                        <span>Annual Shooting Competitions</span>
+                    </p>
+                </a>
+            </div>
+        </nav>
 
-        <main class="login-pg position-relative d-flex justify-content-center align-items-center">
+        <main class="login-pg position-relative d-flex justify-content-center align-items-start">
             <div class="register-img position-absolute"></div>
             <div class="container">
                 <div class="register-header row mb-3">
@@ -78,8 +88,6 @@
                 </div>
             </div>
         </main>
-
-        <app-footer></app-footer>
 
         <script src="js/bootstrap.bundle.min.js"></script>
         <script src="js/gsap.min.js"></script>

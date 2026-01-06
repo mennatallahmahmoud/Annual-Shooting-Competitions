@@ -32,35 +32,6 @@ a {
     font-size: 12px;
 }
 
-
-/* .main-btn {
-    background-color: var(--main-color);
-    color: white;
-    position: relative;
-    transition: 0.5s;
-}
-.main-btn:hover {
-    background-color: var(--main-color);
-    color: white;
-}
-.main-btn::before {
-    position: absolute;
-    content: '';
-    width: 100%;
-    height: 100%;
-    bottom: 50px;
-    left: 0;
-    background-color: var(--secondary-color);
-    z-index: 1;
-    transition: 0.5s;
-}
-.main-btn:hover {
-    padding-left: 32px !important;
-    padding-right: 32px !important;
-}
-.main-btn:hover::before {
-    bottom: 0;
-} */
 .main-btn {
   color: var(--secondary-color);
   text-transform: uppercase;
@@ -148,7 +119,7 @@ nav {
 .main-menu, .middle-menu {
     background-color: #f3f3f3;
 }
-.main-menu {
+.main-menu, .login-navbar {
     border-top: 1px solid #cbc4b4;
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
 }
@@ -191,11 +162,7 @@ nav {
 .navbar-toggler.open i:first-child {
     opacity: 0;
 }
-/* .register-btns-small-screen:nth-last-child(2) {
-    border-top: 1px solid rgba(0, 0, 0, 0.65);
-    margin-top: 20px;
-    padding-top: 20px;
-} */
+
 /* Hero Section */
 
 .hero-section {
@@ -512,7 +479,9 @@ footer .location-side iframe {
 
 /* Login Page */
 
-
+.login-pg {
+    min-height: 90vh;
+}
 .register-img {
     background-image: url("../imgs/register-bg.webp");
     background-size: cover;
@@ -589,11 +558,11 @@ footer .location-side iframe {
     cursor: pointer;
     z-index: 100;
 }
-.login-pg .login-form form .forget-pass {
+.login-pg .login-form form .forget-pass, .register-form .already-user-btn {
     color: #212529;
     font-size: 11px;
 }
-.login-pg .login-form form .forget-pass:hover {
+.login-pg .login-form form .forget-pass:hover, .register-form .already-user-btn:hover {
     color: var(--secondary-color);
 }
 .login-pg .main-btn, .forget-pass-pg .main-btn, .register-pg .register-form form .main-btn {
@@ -607,7 +576,7 @@ footer .location-side iframe {
 
 /* Forget Password Page */
 .forget-pass-pg .forget-pass-form {
-    min-height: 20vh;
+    min-height: 70vh;
 }
 .forget-pass-pg .forget-pass-form > div {
     flex-basis: 50%;
@@ -787,7 +756,13 @@ footer .location-side iframe {
 
     /* Login Page */
 
-    .login-pg .container, .forget-pass-pg .container, .register-pg .container {
+    .login-pg {
+        min-height: 93vh;
+    }
+    .login-pg .container, .forget-pass-pg .container {
+        padding: 60px 20px;
+    }
+    .register-pg .container {
         padding: 40px 20px;
     }
     .register-header .breadcrumb {
@@ -804,6 +779,10 @@ footer .location-side iframe {
     }
     .login-pg .login-form form input, .forget-pass-pg form input, .register-pg .register-form input:not([type="radio"]) {
         font-size: 14px;
+    }
+    .forget-pass-pg .forget-pass-form {
+        justify-content: flex-start;
+        align-items: center;
     }
     .login-pg .login-form form .input-icon, .forget-pass-pg .forget-pass-form .input-icon, .register-pg .register-form .input-icon {
         right: 4%;
@@ -933,8 +912,11 @@ footer .location-side iframe {
     
     /* Login Page */
 
-    .login-pg .container, .forget-pass-pg .container, .register-pg .container {
-        padding: 60px 20px;
+    .login-pg .container, .forget-pass-pg .container {
+        padding: 80px 20px;
+    }
+    .register-pg .container {
+        padding: 40px 20px;
     }
     .register-header .breadcrumb {
         margin-bottom: 20px !important;
@@ -959,6 +941,10 @@ footer .location-side iframe {
     }
 
     /* Forget Password Page */
+    .forget-pass-pg .forget-pass-form {
+        justify-content: center;
+        align-items: flex-start;
+    }
     .forget-pass-pg .forget-pass-form > div {
         margin-left: 16px;
     }
@@ -1027,7 +1013,7 @@ footer .location-side iframe {
 
     /* Login Page */
     .login-pg .container, .register-pg .container {
-        padding: 60px 20px;
+        padding: 80px 20px;
     }
     .login-pg .login-form .right-side, .register-pg .register-form .left-side {
         padding: 48px;
@@ -1048,6 +1034,10 @@ footer .location-side iframe {
     /* Forget Password Page */
     .forget-pass-pg .container {
         padding: 60px;
+    }
+    .forget-pass-pg .forget-pass-form {
+        justify-content: center;
+        align-items: flex-start;
     }
     .forget-pass-pg .forget-pass-form > div {
         margin-left: 16px;
