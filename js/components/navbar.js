@@ -127,11 +127,15 @@ class AppNavbar extends HTMLElement {
                             </ul>
                         </li>
                         <hr class="w-100 d-md-none">
-                        <li class="nav-item register-btns-small-screen d-md-none">
-                            <a href="login.html" class="dropdown-item menu-links nav-link card-link fw-bold p-0">تسجيل الدخول</a>
+                        <li class="nav-item register-btns-small-screen d-flex d-md-none">
+                            <a href="login.html" class="dropdown-item menu-links nav-link card-link fw-bold p-0">
+                            <i class="fa-solid fa-right-to-bracket fa-xs"></i>
+                            تسجيل الدخول</a>
                         </li>
                         <li class="nav-item register-btns-small-screen d-md-none">
-                            <a href="register.html" class="dropdown-item menu-links nav-link card-link fw-bold">حساب جديد</a>
+                            <a href="register.html" class="dropdown-item menu-links nav-link card-link fw-bold">
+                            <i class="fa-solid fa-user-plus fa-xs"></i>
+                            حساب جديد</a>
                         </li>
                     </ul>
                 </div>
