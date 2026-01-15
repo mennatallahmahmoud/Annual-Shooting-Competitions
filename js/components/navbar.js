@@ -4,7 +4,7 @@ class AppNavbar extends HTMLElement {
             
         <nav class="navbar navbar-expand-md d-none d-md-block sub-menu position-relative">
             <div class="container-fluid text-center">
-                <div class="register d-flex justify-content-center align-items-center">
+                <div class="register auth-btns d-flex justify-content-center align-items-center">
                     <button class="btn overflow-hidden d-flex gap-1 align-items-center justify-content-between border-0 mx-auto p-2">
                         <i class="fa-solid fa-right-to-bracket fa-xs text-white"></i>
                         <a href="login.html" class="main-links card-link fw-bold text-white">تسجيل الدخول</a>
@@ -12,6 +12,12 @@ class AppNavbar extends HTMLElement {
                     <button class="btn overflow-hidden d-flex gap-1 align-items-center justify-content-between border-0 mx-auto p-2">
                         <i class="fa-solid fa-user-plus fa-xs text-white"></i>
                         <a href="register.html" class="main-links card-link fw-bold text-white">حساب جديد</a>
+                    </button>
+                </div>
+                <div class="register logout-btn d-flex justify-content-center align-items-center d-none">
+                    <button class="btn overflow-hidden d-flex gap-1 align-items-center justify-content-between border-0 mx-auto p-2">
+                        <i class="fa-solid fa-right-from-bracket fa-xs text-white"></i>
+                        <a href="login.html" class="main-links card-link fw-bold text-white">تسجيل الخروج</a>
                     </button>
                 </div>
                 <p id="date" class="text-white mb-0"></p>
@@ -145,3 +151,15 @@ class AppNavbar extends HTMLElement {
     }
 }
 customElements.define("app-navbar", AppNavbar)
+
+
+// const authBtns = document.querySelector(".auth-btns")
+// const logoutBtn = document.querySelector(".logout-btn")
+
+// if(window.location.pathname.includes("dashboard") && authBtns && logoutBtn) {
+//     logoutBtn.classList.remove("d-none")
+//     authBtns.classList.add("d-none")
+// } else {
+//     logoutBtn.classList.add("d-none")
+//     authBtns.classList.remove("d-none")
+// }
