@@ -62,9 +62,9 @@ a {
   transition: all 1s;
 }
 .main-btn:hover::before {
-  width: 160%;
+    width: 160%;
 }
-.main-btn span, .main-btn a, .main-btn svg {
+.main-btn span, .main-btn a, .main-btn svg, .main-btn i {
     position: relative;
     z-index: 5;
 }
@@ -538,20 +538,23 @@ footer .location-side iframe {
     border-left: 1px solid #e3e3e3;
     z-index: 10;
 }
-.login-pg .login-form form input, .forget-pass-pg .forget-pass-form input, .register-pg .register-form input:not([type="radio"]) {
+.login-pg .login-form form input, .forget-pass-pg .forget-pass-form input, 
+.register-pg .register-form input:not([type="radio"]), #settings input:not([type="radio"]) {
     padding-right: 35px;
 }
-.login-pg .login-form .right-side input:focus, .forget-pass-pg .forget-pass-form input:focus, .register-pg .register-form input:not([type="radio"]):focus {
+.login-pg .login-form .right-side input:focus, .forget-pass-pg .forget-pass-form input:focus, 
+.register-pg .register-form input:not([type="radio"]):focus, #settings input:not([type="radio"]):focus {
     border-color: var(--secondary-color);
     box-shadow: 0 0 0 .25rem rgb(171 112 55 / 32%);
 }
 .login-pg .login-form .right-side input:focus-visible, .forget-pass-pg .forget-pass-form input:focus-visible {
     outline: none;
 }
-.login-pg .login-form form svg, .forget-pass-pg .forget-pass-form svg, .register-pg .register-form svg {
+.login-pg .login-form form svg, .forget-pass-pg .forget-pass-form svg, .register-pg .register-form svg, #settings form svg {
     top: 62%;
 }
-.login-pg .login-form form .show-pass-btn, .register-pg .register-form .show-pass-btn {
+.login-pg .login-form form .show-pass-btn, .register-pg .register-form .show-pass-btn,
+#settings .show-pass-btn {
     top: 55%;
     left: 10px;
     opacity: 0.5;
@@ -574,6 +577,7 @@ footer .location-side iframe {
 }
 
 
+
 /* Forget Password Page */
 .forget-pass-pg .forget-pass-form {
     min-height: 70vh;
@@ -585,18 +589,18 @@ footer .location-side iframe {
 
 
 /* Register Page */
-.register-pg .register-form .radio-btns-signup {
+.radio-btns-signup, .radio-btns-dashboard {
     align-items: center;
 }
-.register-pg .form-check-input:checked {
+.form-check-input:checked {
     background-color: var(--secondary-color) !important;
     border-color: var(--secondary-color) !important;
 }
-.register-pg .form-check-input:focus {
+.form-check-input:focus {
     border-color: var(--secondary-color) !important;
     box-shadow: 0 0 0 .25rem rgb(171 112 55 / 20%) !important;
 }
-.register-pg .register-form .pass-alert {
+.register-pg .register-form .pass-alert, #settings .pass-alert {
     right: 5px;
     font-size: 10px;
     color: rgb(190, 0, 0);
@@ -774,7 +778,7 @@ footer .location-side iframe {
     .login-pg .login-form .right-side, .register-pg .register-form .left-side {
         padding: 20px !important;
     }
-    .login-pg .login-form .right-side label, .forget-pass-pg form label, .register-pg .register-form label {
+    .login-pg .login-form .right-side label, .forget-pass-pg form label, .register-pg .register-form label, #settings label {
         font-size: 12px;
     }
     .login-pg .login-form form input, .forget-pass-pg form input, .register-pg .register-form input:not([type="radio"]) {
@@ -784,7 +788,8 @@ footer .location-side iframe {
         justify-content: flex-start;
         align-items: center;
     }
-    .login-pg .login-form form .input-icon, .forget-pass-pg .forget-pass-form .input-icon, .register-pg .register-form .input-icon {
+    .login-pg .login-form form .input-icon, .forget-pass-pg .forget-pass-form .input-icon, .register-pg .register-form .input-icon,
+    #settings .input-icon {
         right: 4%;
     }
     
@@ -794,7 +799,7 @@ footer .location-side iframe {
     }
 
     /* Register Page */
-    .register-pg .register-form .radio-btns-signup {
+    .radio-btns-signup, .radio-btns-dashboard {
         align-items: flex-start;
     }
     .register-pg .register-form .pass-alert {
@@ -924,14 +929,17 @@ footer .location-side iframe {
     .login-pg .login-form .right-side, .register-pg .register-form .left-side {
         padding: 20px !important;
     }
-    .login-pg .login-form .right-side label, .register-pg .register-form label {
+    .login-pg .login-form .right-side label, .register-pg .register-form label, #settings form label {
         font-size: 12px;
     }
-    .login-pg .login-form form input, .register-pg .register-form input:not([type="radio"]) {
+    .login-pg .login-form form input, .register-pg .register-form input:not([type="radio"]), #settings input:not([type="radio"]) {
         font-size: 14px;
     }
-    .login-pg .login-form form .input-icon, .register-pg .register-form .input-icon {
+    .input-icon {
         right: 4%;
+    }
+    #settings .input-icon {
+        right: 8px;
     }
     .forget-pass-pg .forget-pass-form .input-icon {
         right: 2%;
@@ -1018,10 +1026,10 @@ footer .location-side iframe {
     .login-pg .login-form .right-side, .register-pg .register-form .left-side {
         padding: 48px;
     }
-    .login-pg .login-form .right-side label, .register-pg .register-form label {
+    .login-pg .login-form .right-side label, .register-pg .register-form label, #settings label {
         font-size: 14px;
     }
-    .login-pg .login-form form .input-icon, .register-pg .register-form .input-icon {
+    .input-icon {
         right: 2%;
     }
     .forget-pass-pg .forget-pass-form .input-icon {
@@ -1046,3 +1054,8 @@ footer .location-side iframe {
         margin-top: 2rem;
     }
 }
+
+
+
+
+

@@ -148,7 +148,7 @@ newOrderBtn.forEach(btn => {
 
 async function fetchOrders() {
     try {
-        const res = await fetch("./data/data.json")
+        const res = await fetch("/data/data.json")
         const data = await res.json()
         orders = data.requestTypes        
         renderStats("shooting_permit")
@@ -245,7 +245,7 @@ async function fetchDocs () {
     const docsTbody = document.getElementById("docs-tables-container")
 
     try {
-        const res = await fetch("./data/data.json")
+        const res = await fetch("/data/data.json")
         const data = await res.json()
         const docs = data.docs
         if (!docs || docs.length === 0) {
