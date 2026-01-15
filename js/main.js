@@ -21,7 +21,11 @@ const options = {
 const locale = 'ar-AE-u-ca-islamic';
 const hijriDate = new Intl.DateTimeFormat(locale, options).format(today)
 const fullDate = `${hijriDate} - ${day} ${month} ${year} م`
-date.textContent = fullDate;
+
+if(!date) return
+if(date) {
+  date.textContent = fullDate;
+}
 
 
 
@@ -34,10 +38,11 @@ menuLinks.forEach((link) => {
   })
 })
 
-
-navBtn.addEventListener("click", () => {
-  navBtn.classList.toggle("open")
-})
+if(navBtn) {
+  navBtn.addEventListener("click", () => {
+    navBtn.classList.toggle("open")
+  })
+}
 
 
 
