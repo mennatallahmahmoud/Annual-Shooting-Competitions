@@ -22,8 +22,7 @@ const locale = 'ar-AE-u-ca-islamic';
 const hijriDate = new Intl.DateTimeFormat(locale, options).format(today)
 const fullDate = `${hijriDate} - ${day} ${month} ${year} م`
 
-if(!date) return
-if(date) {
+if(date !== null) {
   date.textContent = fullDate;
 }
 
