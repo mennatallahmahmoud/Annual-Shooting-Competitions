@@ -44,6 +44,7 @@ if(navBtn) {
 }
 
 
-
-copyrightYear.textContent = `© ${new Date().getFullYear()} - 2017`
+if(copyrightYear !== null) {
+  copyrightYear.textContent = `© ${new Date().getFullYear()} - 2017`
+}
 
