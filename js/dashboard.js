@@ -1,5 +1,5 @@
 const mainMenuLinks = document.querySelectorAll(".main-menu .navbar-nav li a:not(.navbar-logout a)")
-const username = document.querySelector(".username")
+const username = document.querySelectorAll(".username")
 const sidebarTabs = document.querySelectorAll(".sidebar-tab")
 const sidebarDropdown = document.querySelectorAll(".sidebar-drop-down")
 const trackingDropdown = document.querySelectorAll(".shooting-permit-sidebar-tab ul li a")
@@ -22,8 +22,7 @@ let orders;
 let parentTabDatasetFromNestedTab;
 
 const usernameFromLS = JSON.parse(window.localStorage.getItem("username")).username.split("@")[0]
-username.textContent = `مرحبا ${usernameFromLS}`
-
+username.forEach(u => u.textContent = `مرحباً، ${usernameFromLS}`)
 
 // Sidebar and Navbar 
 
@@ -148,7 +147,7 @@ newOrderBtn.forEach(btn => {
 
 async function fetchOrders() {
     try {
-        const res = await fetch("data/data.json")
+        const res = await fetch("/data/data.json")
         const data = await res.json()
         orders = data.requestTypes        
         renderStats("shooting_permit")
@@ -245,7 +244,7 @@ async function fetchDocs () {
     const docsTbody = document.getElementById("docs-tables-container")
 
     try {
-        const res = await fetch("data/data.json")
+        const res = await fetch("/data/data.json")
         const data = await res.json()
         const docs = data.docs
         if (!docs || docs.length === 0) {
