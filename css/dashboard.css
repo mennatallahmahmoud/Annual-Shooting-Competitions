@@ -1,0 +1,452 @@
+:root {
+    --gray-color-border: #0000001a
+}
+
+.navbar-logout a {
+    color: #000000a6;
+    font-size: 14px;
+}
+.navbar-logout a.active, .navbar-logout a:hover {
+    background-color: transparent;
+    color: var(--text-color);
+}
+.dropdown-toggle::after {
+  display: none;
+}
+.register-btns-small-screen {
+    color: rgba(0, 0, 0, 0, 65%);
+}
+.main-container {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    margin: auto;
+    padding: 60px 0;
+    min-height: 80vh;
+    gap: 24px;
+}
+aside, main {
+    background: linear-gradient(120deg, #f2f2f2, #3f5d4a34, rgba(63, 93, 74, 0.12) ,#f2f2f2);
+    background-size: 400% 400%;
+    border-radius: 8px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border: 1px solid #e2e2e2;
+}
+aside::before, main::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-image: url("../imgs/dashboard-bg.jpg");
+    background-size: cover;
+    background-position: center;
+    opacity: 0.3;
+}
+
+/* Sidebar */
+aside {
+    padding: 20px 10px;
+}
+aside .username {
+    font-size: 20px;
+}
+aside .sidebar-head {
+    padding: 20px;
+}
+aside .sidebar-head svg {
+    margin-top: 3px;
+}
+aside .sidebar-tabs ul li {
+    cursor: pointer;
+}
+aside .sidebar-tabs ul li::before {
+    position: absolute;
+    content: '';
+    width: 3%;
+    height: 100%;
+    background-color: var(--secondary-color);
+    top: 0;
+    right: 0;
+    transition: 0.7s;
+    border-radius: 0 6px 6px 0;
+    pointer-events: none;
+}
+aside .sidebar-tabs ul li:hover::before {
+    width: 100%;
+}
+aside .sidebar-tabs ul li:not(:last-child), aside .sidebar-head {
+    border-bottom: 1px solid var(--gray-color-border);
+}
+aside .sidebar-head, .sidebar-tabs ul li a {
+    color: var(--text-color);
+}
+.sidebar-tabs ul li button {
+    font-size: 14px;
+    padding: 14px;
+    transition: color 0.5s;
+}
+.dropdown-item {
+    font-size: 14px;
+    padding-right: 50px;
+}
+.sidebar-tabs ul li.active i, .sidebar-tabs ul li.active {
+    cursor: auto;
+}
+.sidebar-tabs ul li.active i, .sidebar-tabs ul li.active span {
+    color: white;
+}
+aside .sidebar-tabs ul li.sidebar-tab:nth-of-type(1).active i, aside .sidebar-tabs ul li.sidebar-tab:nth-of-type(1):hover i,
+aside .sidebar-tabs ul li.sidebar-tab:nth-of-type(2).active i, aside .sidebar-tabs ul li.sidebar-tab:nth-of-type(2):hover i 
+{
+    transform: rotate(-90deg);
+}
+aside .sidebar-tabs ul li.sidebar-tab:nth-of-type(3).active i, aside .sidebar-tabs ul li.sidebar-tab:nth-of-type(3):hover i,
+aside .sidebar-tabs ul li.sidebar-tab:nth-of-type(4).active i, aside .sidebar-tabs ul li.sidebar-tab:nth-of-type(4):hover i {
+    transform: translateX(-10px);
+}
+.sidebar-tabs ul li.active::before {
+    width: 100%;
+}
+aside .sidebar-tabs ul li:hover button {
+    color: white !important;
+}
+aside .sidebar-tabs ul li i {
+    transition: transform 0.8s, color 0.5s;
+}
+aside .sidebar-tabs ul li i, aside .sidebar-tabs ul li span {
+    z-index: 100;
+}
+.sidebar-tabs .dropdown-menu {
+    background-color: #e9e9e9;
+    z-index: 1000;
+}
+.sidebar-tabs .dropdown-menu li::before {
+    background-color: transparent !important;
+}
+.sidebar-tabs .dropdown-menu li a.active, .sidebar-tabs .dropdown-menu li a:focus, 
+.main-menu .navbar-nav li a.active:not(.navbar-logout a),  .main-menu .navbarnav li a:focus:not(.navbar-logout a) {
+    background-color: #bf966e;
+    border-radius: 0 4px 0 0;
+}
+
+
+/* Main */
+main {
+    z-index: 10;
+}
+main .main-btn {
+    font-size: 14px;
+}
+
+/* Cards */
+.cards {
+    margin: 40px auto 35px;
+    width: 60%;
+}
+.cards-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+}
+.cards-container .card:first-child i {
+    color: var(--secondary-color);
+}
+.cards-container .card:nth-child(2) i {
+    color: #6F8F7A;
+}
+.cards-container .card:nth-child(3) i {
+    color: #C49A6C;
+}
+.card {
+    position: relative;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    line-height: 1.6;
+    transition: all 0.48s cubic-bezier(0.23, 1, 0.32, 1);
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 10px;
+    padding: 14px 10px;
+    border-radius: 6px;
+    overflow: hidden;
+    color: var(--text-color);
+    background: #f0f0f0;
+    font-size: 14px;
+    transition: all 0.48s cubic-bezier(0.23, 1, 0.32, 1);
+}
+.content::before {
+  position: absolute;
+  content: "";
+  top: -4%;
+  left: 50%;
+  width: 90%;
+  height: 90%;
+  transform: translate(-50%);
+  background: #c7c7c7;
+  z-index: -1;
+  transform-origin: bottom;
+  border-radius: inherit;
+  transition: all 0.48s cubic-bezier(0.23, 1, 0.32, 1);
+}
+.content::after {
+  position: absolute;
+  content: "";
+  top: -8%;
+  left: 50%;
+  width: 80%;
+  height: 80%;
+  transform: translate(-50%);
+  background: var(--secondary-color);
+  z-index: -2;
+  transform-origin: bottom;
+  border-radius: inherit;
+  transition: all 0.48s cubic-bezier(0.23, 1, 0.32, 1);
+}
+.content .para {
+  z-index: 1;
+  opacity: 1;
+  transition: all 0.48s cubic-bezier(0.23, 1, 0.32, 1);
+}
+.card:hover {
+  transform: translate(0px, -8px);
+}
+.card:hover .content::before {
+  rotate: -4deg;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+.card:hover .content::after {
+  rotate: 4deg;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Tracking Section */
+.tables .table-container {
+    border-radius: 6px;
+    overflow-x: auto;
+}
+.tables table {
+    width: 100%;
+    border-collapse: collapse;
+    white-space: nowrap;
+    font-size: 14px;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+}
+.tables th {
+    background-color: var(--secondary-color);
+    color: white;
+    white-space: nowrap;
+}
+.tables td {
+    background-color: #f3f3f3;
+    white-space: nowrap;
+}
+.tables td i {
+    cursor: pointer;
+    color: #2e2620e0;
+}
+.tables td i:hover {
+    color: var(--secondary-color);
+}
+.table-container::-webkit-scrollbar {
+  width: 10px;
+  height: 6px;
+}
+.table-container::-webkit-scrollbar-track {
+  background: #f2f2f2;
+  border-radius: 6px;
+}
+.table-container::-webkit-scrollbar-thumb {
+  background: var(--secondary-color);
+  border-radius: 6px;
+}
+
+
+/* Orders Section*/
+.forms {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.forms form input[type="text"], .forms form input[type="number"], .forms form select {
+    padding-right: 35px;
+}
+.forms form i:not(.main-btn i) {
+    color: var(--secondary-color);
+    position: absolute;
+    top: 63%;
+    right: 10px;
+}
+.forms form input:focus, .forms form input:focus, .forms form input:not([type="radio"]):focus, .forms form select:focus {
+    border-color: var(--secondary-color);
+    box-shadow: 0 0 0 .25rem rgb(171 112 55 / 32%);
+}
+.forms .form-check-input:checked {
+    background-color: var(--secondary-color) !important;
+    border-color: var(--secondary-color) !important;
+}
+.forms .form-check-input:focus {
+    border-color: var(--secondary-color) !important;
+    box-shadow: 0 0 0 .25rem rgb(171 112 55 / 20%) !important;
+}
+input[type="date"]::-webkit-calendar-picker-indicator,
+input[type="time"]::-webkit-calendar-picker-indicator {
+    opacity: 0;
+}
+.docs-requirements {
+    font-size: 10px;
+    color: #6b6b6b;
+}
+.files-input {
+    width: 100%;
+    padding: 6px 35px 6px 12px;
+    background-color: #ffffff;
+    border-radius: 6px;
+    cursor: pointer;
+}
+.files-input i {
+    position: absolute;
+    top: 33% !important;
+}
+.file-text {
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+}
+.input-label, input, .file-text, select {
+    font-size: 14px !important;
+}
+.checkbox-form {
+    align-items: center;
+}
+.billboard-booking-note {
+    font-size: 14px;
+    background-color: #3f5d4a42;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+    border-radius: 6px;
+}
+select option:checked, option:hover {
+  background-color: var(--secondary-color) !important;
+  color: #fff !important;
+}
+
+
+/* Media Queries */
+@media (min-width: 768px) {
+    main section {
+        padding: 40px 30px;
+    }
+    .section-heading {
+        font-size: 18px !important;
+    }
+    .div-inputs-gap {
+        gap: 20px;
+    }
+    .checkbox-form {
+        gap: 20px;
+    }
+}
+@media (max-width: 767px) {
+    main {
+        padding: 20px;
+    }
+    main button.main-btn {
+        font-size: 12px;
+    }
+    .section-heading {
+        font-size: 16px !important;
+    }
+    .cards, .forms {
+        width: 100%;
+        margin: 35px auto;
+    }
+    .cards .content {
+        font-size: 12px;
+    }
+    .cards-container {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    table td, table th {
+        font-size: 10px;
+    }
+}
+@media (min-width: 992px) {
+    .sidebar-tabs .dropdown:hover > .dropdown-menu {
+        display: block;
+    }
+    .sidebar-tabs .sidebar-tab.active ul {
+        display: block;
+        position: relative;
+        z-index: 100;
+        border: 0;
+        border-radius: 0;
+    }
+    .sidebar-tabs .dropdown-toggle {
+        pointer-events: none;
+    }
+    .section-heading {
+        font-size: 24px !important;
+    }
+}
+@media (max-width: 991px) {
+    .main-container {
+        grid-template-columns: 1fr;
+        gap: 0;
+        padding: 20px;
+    }
+    .cards, .forms {
+        width: 100%;
+    }
+    main .orders .main-btn {
+        margin-bottom: 20px !important;
+    }
+    .input-label, input, .file-text, select, .billboard-booking-note {
+        font-size: 12px !important;
+    }
+    .checkbox-form {
+        align-items: flex-start;
+    }
+    .billboard_booking_note {
+        font-size: 10px;
+    }
+}
+@media (min-width: 1025px) {
+    main .main-btn {
+        width: 25% !important;
+    }
+    .cards, .forms {
+        width: 100%;
+    }
+    main #documents .main-btn {
+        width: 50% !important;
+    }
+}
+@media (min-width: 1444px) {
+    .cards {
+        width: 60%;
+    }
+    .cards-container .row {
+        width: 80%;
+    }
+    .forms {
+        width: 90%;
+    }
+}
+
+
+
