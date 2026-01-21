@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>لوحة التحكم</title>
-    
+    <title>طلب تصريح تصوير</title>
     <link rel="icon" href="imgs/logo.webp"/>
     <link rel="stylesheet" href="css/bootstrap.rtl.css"/>
     <link rel="stylesheet" href="css/bootstrap.rtl.min.css"/>
@@ -14,7 +13,7 @@
     <link rel="stylesheet" href="css/main.css"/>
 </head>
 <body>
-
+    
     <nav class="navbar navbar-expand-md d-none d-lg-block sub-menu position-relative">
         <div class="container-fluid text-center">
             <div class="register logout-btn d-flex justify-content-center align-items-center">
@@ -47,29 +46,29 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
                 <ul class="navbar-nav mx-auto align-items-center p-3">
-                    <li class="position-relative mb-2 nav-item dropdown tracking-sidebar-tab sidebar-tab active" data-target="tracking">
+                    <li class="position-relative mb-2 nav-item dropdown tracking-sidebar-tab sidebar-tab" data-target="tracking">
                         <button class="nav-link fw-bold d-flex align-items-center justify-content-start gap-3 w-100 dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" type="button">
                             <span>متابعة الطلبات</span>
                         </button>
 
                         <ul class="dropdown-menu w-100">
                             <li>
-                                <a href="#" class="dropdown-item sidebar-drop-down active" data-type="shooting_permit">
+                                <a href="dashboard.html" class="dropdown-item sidebar-drop-down" data-type="shooting_permit">
                                     تصريح تصوير
                                 </a>
                             </li>
                             <li>
-                                <a href="#" class="dropdown-item sidebar-drop-down" data-type="events_permit">
+                                <a href="dashboard.html" class="dropdown-item sidebar-drop-down" data-type="events_permit">
                                     تصريح فعاليات
                                 </a>
                             </li>
                             <li>
-                                <a href="#" class="dropdown-item sidebar-drop-down" data-type="facility_booking">
+                                <a href="dashboard.html" class="dropdown-item sidebar-drop-down" data-type="facility_booking">
                                     حجز مرافق
                                 </a>
                             </li>
                             <li>
-                                <a href="#" class="dropdown-item sidebar-drop-down" data-type="billboard_booking">
+                                <a href="dashboard.html" class="dropdown-item sidebar-drop-down" data-type="billboard_booking">
                                     حجز اللوحات الإعلانية
                                 </a>
                             </li>
@@ -109,7 +108,7 @@
                         </a>
                     </li>
                     <li class="position-relative mb-2 nav-item dropdown sidebar-tab" data-target="documents">
-                        <a href="documents.html" class="nav-link fw-bold d-flex align-items-center justify-content-start gap-3 w-100" type="button">
+                        <a href="documents.html" class="nav-link fw-bold d-flex align-items-center justify-content-start gap-3 w-100 active" type="button">
                             <span>المستندات</span>
                         </a>
                     </li>
@@ -139,36 +138,38 @@
             </div>
             <div class="sidebar-tabs mt-5 position-relative">
                 <ul>
-                    <li class="position-relative mb-2 nav-item dropdown tracking-sidebar-tab sidebar-tab active" data-target="tracking">
-                        <button class="nav-link tracking-main-btn fw-bold d-flex align-items-center justify-content-start gap-3 w-100" type="button">
+
+
+                    <li class="position-relative mb-2 nav-item dropdown shooting-permit-sidebar-tab sidebar-tab" data-target="tracking">
+                        <a href="dashboard.html" class="nav-link fw-bold d-flex align-items-center justify-content-start gap-3 w-100" type="button">
                             <span>متابعة الطلبات</span>
                             <i class="fa-solid fa-angle-left position-relative"></i>
-                        </button>
+                        </a>
 
                         <ul class="dropdown-menu w-100">
                             <li>
-                                <a href="#" class="tracking-btns dropdown-item sidebar-drop-down active" data-type="shooting_permit">
+                                <a href="dashboard.html" class="dropdown-item sidebar-drop-down" data-type="shooting_permit">
                                     تصريح تصوير
                                 </a>
                             </li>
                             <li>
-                                <a href="#" class="tracking-btns dropdown-item sidebar-drop-down" data-type="events_permit">
+                                <a href="dashboard.html" class="dropdown-item sidebar-drop-down" data-type="events_permit">
                                     تصريح فعاليات
                                 </a>
                             </li>
                             <li>
-                                <a href="#" class="tracking-btns dropdown-item sidebar-drop-down" data-type="facility_booking">
+                                <a href="dashboard.html" class="dropdown-item sidebar-drop-down" data-type="facility_booking">
                                     حجز مرافق
                                 </a>
                             </li>
                             <li>
-                                <a href="#" class="tracking-btns dropdown-item sidebar-drop-down" data-type="billboard_booking">
+                                <a href="dashboard.html" class="dropdown-item sidebar-drop-down" data-type="billboard_booking">
                                     حجز اللوحات الإعلانية
                                 </a>
                             </li>
                         </ul>
                     </li>
-                    <li class="position-relative mb-2 nav-item dropdown requests-sidebar-tab sidebar-tab" data-target="orders">
+                    <li class="position-relative mb-2 nav-item dropdown events-permit-sidebar-tab sidebar-tab" data-target="orders">
                         <a href="shooting-permit.html" class="nav-link fw-bold d-flex align-items-center justify-content-start gap-3 w-100" type="button">
                             <span>طلب جديد</span>
                             <i class="fa-solid fa-angle-left position-relative"></i>
@@ -203,7 +204,7 @@
                         </a>
 
                     </li>
-                    <li class="position-relative mb-2 nav-item sidebar-tab" data-target="documents">
+                    <li class="position-relative mb-2 nav-item sidebar-tab active" data-target="documents">
                         <a href="documents.html" class="nav-link fw-bold d-flex align-items-center justify-content-start gap-3 w-100" type="button">
                             <span>المستندات</span>
                             <i class="fa-solid fa-angle-left position-relative"></i>
@@ -224,85 +225,60 @@
 
         <main class="overflow-hidden position-relative overflow-hidden">
 
-
-            <section id="tracking" class="tracking position-relative my-4">
-                <h3 class="section-heading fw-bold position-relative">
-                    <span class="table-header d-block"></span>
-                    <svg width="270" height="24" viewBox="0 0 270 24" xmlns="http://www.w3.org/2000/svg" class="tracking-title-svg d-none d-lg-block">
-                        <rect x="110" y="11" width="170" height="2" rx="1" fill="#ab7037" class="d-none d-md-block"/>
-                        <rect x="160" y="11" width="170" height="2" rx="1" fill="#ab7037" class="d-md-none"/>
-                        <rect x="250" y="7" width="20" height="10" rx="2" fill="#ab7037"/>
+            <section id="documents" class="position-relative my-4">
+                <h3 class="section-heading fw-bold mb-3">
+                    <span class="d-block">المستندات</span>
+                    <svg width="270" height="24" viewBox="0 0 270 24" xmlns="http://www.w3.org/2000/svg" class="d-none d-lg-block">
+                        <rect x="160" y="11" width="110" height="2" rx="1" fill="#ab7037"/>
+                        <rect x="150" y="7" width="20" height="10" rx="2" fill="#ab7037"/>
                     </svg>
-                    <svg width="200" height="24" viewBox="0 0 270 24" xmlns="http://www.w3.org/2000/svg" class="tracking-title-svg d-lg-none">
-                        <rect x="110" y="11" width="170" height="2" rx="1" fill="#ab7037" class="d-none d-md-block"/>
-                        <rect x="160" y="11" width="170" height="2" rx="1" fill="#ab7037" class="d-md-none"/>
-                        <rect x="250" y="7" width="20" height="10" rx="2" fill="#ab7037"/>
+                    <svg width="190" height="24" viewBox="0 0 270 24" xmlns="http://www.w3.org/2000/svg" class="d-lg-none">
+                        <rect x="160" y="11" width="110" height="2" rx="1" fill="#ab7037"/>
+                        <rect x="150" y="7" width="20" height="10" rx="2" fill="#ab7037"/>
                     </svg>
                 </h3>
-                
-                <div class="tracking-container">
-                    <div class="cards">
-                        <div class="cards-container">
-                            <div class="card border-0">
-                                <div class="content">
-                                    <i class="fa-solid fa-file-lines fa-2x"></i>
-                                    <div>
-                                        <p class="para mb-0">إجمالي الطلبات</p>
-                                        <span id="totalOrders" class="fw-bold"></span>
-                                    </div>
-                                </div>
+                <div class="forms">
+                    <form>
+                        <div class="d-flex justify-content-center align-items-center flex-column flex-md-row div-inputs-gap mb-3"> 
+                            <div class="position-relative w-100 mb-1">
+                                <label for="file-name" class="form-label input-label d-block text-start">اسم المستند</label>
+                                <input id="file-name" type="text" class="form-control text-start" placeholder="اكتب اسم الملف" required minlength="2">
+                                <i class="fa-regular fa-file"></i>
                             </div>
-                            <div class="card border-0">
-                                <div class="content">
-                                    <i class="fa-solid fa-file-circle-check fa-2x"></i>
-                                    <div>
-                                        <p class="para mb-0">الطلبات المكتملة</p>
-                                        <span id="completedOrders" class="fw-bold"></span>
-                                    </div>
-                                </div>
+                            <div class="position-relative w-100 overflow-hidden mb-1">
+                                <label class="form-label input-label d-block text-start">المستند</label>
+                                <label for="file-document" class="files-input custom-file-input position-relative">
+                                    <i class="fa-solid fa-paperclip"></i>
+                                    <span class="file-text">اختر الملف</span>
+                                </label>
+                                <input type="file" id="file-document" hidden required>
                             </div>
-                            <div class="card border-0">
-                                <div class="content">
-                                    <i class="fa-solid fa-spinner fa-spin fa-2x"></i>
-                                    <div>
-                                        <p class="para mb-0">الطلبات الجارية</p>
-                                        <span id="inProgressOrders" class="fw-bold"></span>
-                                    </div>
-                                </div>
-                            </div>
+                            <button type="submit" class="btn main-btn submit-btn d-block mx-auto fw-bold overflow-hidden mt-4 position-relative w-100">
+                                <i class="fa-solid fa-floppy-disk fa-lg position-relative top-0 start-0"></i>
+                                <span>حفظ</span>
+                            </button>
                         </div>
+                        <span class="docs-requirements d-block text-center mb-4 fw-bold">* JPG، PNG، PDF، DOC | الحد الأقصى: 2 م.ب</span>
+                    </form>
+                </div>
+                <div class="tables">
+                    <div class="table-container table-responsive">
+                        <table class="table table-hover text-center">
+                            <thead>
+                                <tr>
+                                    <th scope="col">عنوان الملف</th>
+                                    <th scope="col">تاريخ الإضافة</th>
+                                    <th scope="col">التحكم</th>
+                                </tr>
+                            </thead>
+                            <tbody id="docs-tables-container"></tbody>
+                        </table>
                     </div>
-
-                    <div id="tables-container" class="tables">
-                        <a href="#" type="button" class="btn main-btn new-order-btn submit-btn d-block ms-auto mb-4 fw-bold overflow-hidden w-50">
-                            <i class="fa-solid fa-plus"></i>
-                            <span>طلب جديد</span>
-                        </a>
-                        <div class="table-container table-responsive">
-                            <table class="table table-hover text-center">
-                                <thead>
-                                    <tr>
-                                        <th scope="col">التاريخ</th>
-                                        <th scope="col">الموضوع</th>
-                                        <th scope="col">الحالة</th>
-                                        <th scope="col">الرسوم</th>
-                                        <th scope="col">التحكم</th>
-                                    </tr>
-                                </thead>
-                                <tbody id="ordersTbody"></tbody>
-                            </table>
-                        </div>
-                    </div> 
-                    <div id="no-orders-container" class="text-center d-none">
-                        <span class="d-block mb-4 fs-3 fw-bold">لا توجد طلبات!</span>
-                        <a href="#" type="button" class="btn main-btn new-order-btn submit-btn d-block mx-auto mb-3 fw-bold overflow-hidden">
-                            <i class="fa-solid fa-plus"></i>
-                            <span>طلب جديد</span>
-                        </a>
-                    </div>
+                </div> 
+                <div id="no-docs-container" class="text-center d-none">
+                    <span class="d-block mb-4 fs-3 fw-bold">لا توجد مستندات!</span>
                 </div>
             </section>
-
 
         </main>
     </div>
@@ -320,8 +296,9 @@
         </div>
     </footer>
 
+
     <script src="js/bootstrap.bundle.min.js"></script>
-    <script src="js/dashboard.js"></script>
+    <script src="js/documents.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>

@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>لوحة التحكم</title>
-    
+    <title>طلب تصريح تصوير</title>
     <link rel="icon" href="imgs/logo.webp"/>
     <link rel="stylesheet" href="css/bootstrap.rtl.css"/>
     <link rel="stylesheet" href="css/bootstrap.rtl.min.css"/>
@@ -14,7 +13,7 @@
     <link rel="stylesheet" href="css/main.css"/>
 </head>
 <body>
-
+    
     <nav class="navbar navbar-expand-md d-none d-lg-block sub-menu position-relative">
         <div class="container-fluid text-center">
             <div class="register logout-btn d-flex justify-content-center align-items-center">
@@ -54,22 +53,22 @@
 
                         <ul class="dropdown-menu w-100">
                             <li>
-                                <a href="#" class="dropdown-item sidebar-drop-down active" data-type="shooting_permit">
+                                <a href="dashboard.html" class="dropdown-item sidebar-drop-down" data-type="shooting_permit">
                                     تصريح تصوير
                                 </a>
                             </li>
                             <li>
-                                <a href="#" class="dropdown-item sidebar-drop-down" data-type="events_permit">
+                                <a href="dashboard.html" class="dropdown-item sidebar-drop-down" data-type="events_permit">
                                     تصريح فعاليات
                                 </a>
                             </li>
                             <li>
-                                <a href="#" class="dropdown-item sidebar-drop-down" data-type="facility_booking">
+                                <a href="dashboard.html" class="dropdown-item sidebar-drop-down" data-type="facility_booking">
                                     حجز مرافق
                                 </a>
                             </li>
                             <li>
-                                <a href="#" class="dropdown-item sidebar-drop-down" data-type="billboard_booking">
+                                <a href="dashboard.html" class="dropdown-item sidebar-drop-down" data-type="billboard_booking">
                                     حجز اللوحات الإعلانية
                                 </a>
                             </li>
@@ -92,7 +91,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="facility-booking.html" class="dropdown-item sidebar-drop-down" data-type="facility_booking_request">
+                                <a href="facility-booking.html" class="dropdown-item sidebar-drop-down active" data-type="facility_booking_request">
                                     طلب حجز مرافق
                                 </a>
                             </li>
@@ -139,36 +138,36 @@
             </div>
             <div class="sidebar-tabs mt-5 position-relative">
                 <ul>
-                    <li class="position-relative mb-2 nav-item dropdown tracking-sidebar-tab sidebar-tab active" data-target="tracking">
-                        <button class="nav-link tracking-main-btn fw-bold d-flex align-items-center justify-content-start gap-3 w-100" type="button">
+                    <li class="position-relative mb-2 nav-item dropdown shooting-permit-sidebar-tab sidebar-tab" data-target="tracking">
+                        <a href="dashboard.html" class="nav-link fw-bold d-flex align-items-center justify-content-start gap-3 w-100" type="button">
                             <span>متابعة الطلبات</span>
                             <i class="fa-solid fa-angle-left position-relative"></i>
-                        </button>
+                        </a>
 
                         <ul class="dropdown-menu w-100">
                             <li>
-                                <a href="#" class="tracking-btns dropdown-item sidebar-drop-down active" data-type="shooting_permit">
+                                <a href="dashboard.html" class="dropdown-item sidebar-drop-down" data-type="shooting_permit">
                                     تصريح تصوير
                                 </a>
                             </li>
                             <li>
-                                <a href="#" class="tracking-btns dropdown-item sidebar-drop-down" data-type="events_permit">
+                                <a href="dashboard.html" class="dropdown-item sidebar-drop-down" data-type="events_permit">
                                     تصريح فعاليات
                                 </a>
                             </li>
                             <li>
-                                <a href="#" class="tracking-btns dropdown-item sidebar-drop-down" data-type="facility_booking">
+                                <a href="dashboard.html" class="dropdown-item sidebar-drop-down" data-type="facility_booking">
                                     حجز مرافق
                                 </a>
                             </li>
                             <li>
-                                <a href="#" class="tracking-btns dropdown-item sidebar-drop-down" data-type="billboard_booking">
+                                <a href="dashboard.html" class="dropdown-item sidebar-drop-down" data-type="billboard_booking">
                                     حجز اللوحات الإعلانية
                                 </a>
                             </li>
                         </ul>
                     </li>
-                    <li class="position-relative mb-2 nav-item dropdown requests-sidebar-tab sidebar-tab" data-target="orders">
+                    <li class="position-relative mb-2 nav-item dropdown events-permit-sidebar-tab sidebar-tab active" data-target="orders">
                         <a href="shooting-permit.html" class="nav-link fw-bold d-flex align-items-center justify-content-start gap-3 w-100" type="button">
                             <span>طلب جديد</span>
                             <i class="fa-solid fa-angle-left position-relative"></i>
@@ -185,7 +184,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="facility-booking.html" class="dropdown-item sidebar-drop-down" data-type="facility_booking_request">
+                                <a href="facility-booking.html" class="dropdown-item sidebar-drop-down active" data-type="facility_booking_request">
                                     طلب حجز مرافق
                                 </a>
                             </li>
@@ -224,89 +223,125 @@
 
         <main class="overflow-hidden position-relative overflow-hidden">
 
-
-            <section id="tracking" class="tracking position-relative my-4">
-                <h3 class="section-heading fw-bold position-relative">
-                    <span class="table-header d-block"></span>
-                    <svg width="270" height="24" viewBox="0 0 270 24" xmlns="http://www.w3.org/2000/svg" class="tracking-title-svg d-none d-lg-block">
-                        <rect x="110" y="11" width="170" height="2" rx="1" fill="#ab7037" class="d-none d-md-block"/>
-                        <rect x="160" y="11" width="170" height="2" rx="1" fill="#ab7037" class="d-md-none"/>
-                        <rect x="250" y="7" width="20" height="10" rx="2" fill="#ab7037"/>
-                    </svg>
-                    <svg width="200" height="24" viewBox="0 0 270 24" xmlns="http://www.w3.org/2000/svg" class="tracking-title-svg d-lg-none">
-                        <rect x="110" y="11" width="170" height="2" rx="1" fill="#ab7037" class="d-none d-md-block"/>
-                        <rect x="160" y="11" width="170" height="2" rx="1" fill="#ab7037" class="d-md-none"/>
-                        <rect x="250" y="7" width="20" height="10" rx="2" fill="#ab7037"/>
-                    </svg>
-                </h3>
-                
-                <div class="tracking-container">
-                    <div class="cards">
-                        <div class="cards-container">
-                            <div class="card border-0">
-                                <div class="content">
-                                    <i class="fa-solid fa-file-lines fa-2x"></i>
-                                    <div>
-                                        <p class="para mb-0">إجمالي الطلبات</p>
-                                        <span id="totalOrders" class="fw-bold"></span>
-                                    </div>
-                                </div>
+            <section id="orders" class="orders position-relative my-4">
+                <div id="forms" class="forms">
+                    <form id="facility_booking_request" class="facility-booking">
+                        <h3 class="section-heading fw-bold mb-3">
+                            <span class="d-block">طلب حجز مرافق</span>
+                            <svg width="250" height="24" viewBox="0 0 270 24" xmlns="http://www.w3.org/2000/svg" class="d-none d-lg-block">
+                                <rect x="0" y="11" width="170" height="2" rx="1" fill="#ab7037"/>
+                                <rect x="160" y="7" width="20" height="10" rx="2" fill="#ab7037"/>
+                            </svg>
+                            <svg width="200" height="24" viewBox="0 0 270 24" xmlns="http://www.w3.org/2000/svg" class="d-lg-none">
+                                <rect x="0" y="11" width="170" height="2" rx="1" fill="#ab7037"/>
+                                <rect x="160" y="7" width="20" height="10" rx="2" fill="#ab7037"/>
+                            </svg>
+                        </h3>
+                        <div class="d-flex justify-content-center align-items-center flex-column flex-md-row div-inputs-gap mb-3"> 
+                            <div class="position-relative w-100 mb-1">
+                                <label for="location-facility-booking" class="form-label input-label d-block text-start">عنوان الفعالية</label>
+                                <input id="location-facility-booking" type="text" class="form-control text-start" placeholder="أدخل عنوان الفعالية" required minlength="2">
+                                <i class="fa-solid fa-pen-to-square"></i>
                             </div>
-                            <div class="card border-0">
-                                <div class="content">
-                                    <i class="fa-solid fa-file-circle-check fa-2x"></i>
-                                    <div>
-                                        <p class="para mb-0">الطلبات المكتملة</p>
-                                        <span id="completedOrders" class="fw-bold"></span>
-                                    </div>
-                                </div>
+                            <div class="position-relative w-100 mb-1">
+                                <label for="event-type-facility-booking" class="form-label input-label d-block text-start">نوع الفعالية</label>
+                                <input id="event-type-facility-booking" type="text" class="form-control text-start" placeholder="مثال: مؤتمر – ورشة عمل" required minlength="2">
+                                <i class="fa-solid fa-pen-to-square"></i>
                             </div>
-                            <div class="card border-0">
-                                <div class="content">
-                                    <i class="fa-solid fa-spinner fa-spin fa-2x"></i>
-                                    <div>
-                                        <p class="para mb-0">الطلبات الجارية</p>
-                                        <span id="inProgressOrders" class="fw-bold"></span>
-                                    </div>
-                                </div>
+                            <div class="position-relative w-100 mb-1">
+                                <label for="attendants-nums-facility-booking" class="form-label input-label d-block text-start">عدد الحضور</label>
+                                <input id="attendants-nums-facility-booking" type="number" class="form-control text-start" placeholder="عدد الحضور المتوقع" required min="1">
+                                <i class="fa-solid fa-user-group"></i>
                             </div>
                         </div>
-                    </div>
-
-                    <div id="tables-container" class="tables">
-                        <a href="#" type="button" class="btn main-btn new-order-btn submit-btn d-block ms-auto mb-4 fw-bold overflow-hidden w-50">
-                            <i class="fa-solid fa-plus"></i>
-                            <span>طلب جديد</span>
-                        </a>
-                        <div class="table-container table-responsive">
-                            <table class="table table-hover text-center">
-                                <thead>
-                                    <tr>
-                                        <th scope="col">التاريخ</th>
-                                        <th scope="col">الموضوع</th>
-                                        <th scope="col">الحالة</th>
-                                        <th scope="col">الرسوم</th>
-                                        <th scope="col">التحكم</th>
-                                    </tr>
-                                </thead>
-                                <tbody id="ordersTbody"></tbody>
-                            </table>
+                        <div class="d-flex justify-content-center align-items-center flex-column flex-md-row div-inputs-gap mb-3"> 
+                            <div class="position-relative w-100 mb-1">
+                                <label for="facility-booking-date" class="form-label input-label d-block text-start">تاريخ الفعالية</label>
+                                <input id="facility-booking-date" type="date" class="form-control text-start" required onfocus="this.showPicker()">
+                                <i class="fa-solid fa-calendar-days"></i>
+                            </div>
+                            <div class="position-relative w-100 mb-1">
+                                <label for="start-booking-time-facility-booking" class="form-label input-label d-block text-start">وقت بدء الفعالية</label>
+                                <input id="start-booking-time-facility-booking" type="time" class="form-control text-start" required onfocus="this.showPicker()">
+                                <i class="fa-regular fa-clock"></i>
+                            </div>
+                            <div class="position-relative w-100 mb-1">
+                                <label for="end-booking-time-facility-booking" class="form-label input-label d-block text-start">وقت نهاية الفعالية</label>
+                                <input id="end-booking-time-facility-booking" type="time" class="form-control text-start" required onfocus="this.showPicker()">
+                                <i class="fa-regular fa-clock"></i>
+                            </div>
                         </div>
-                    </div> 
-                    <div id="no-orders-container" class="text-center d-none">
-                        <span class="d-block mb-4 fs-3 fw-bold">لا توجد طلبات!</span>
-                        <a href="#" type="button" class="btn main-btn new-order-btn submit-btn d-block mx-auto mb-3 fw-bold overflow-hidden">
-                            <i class="fa-solid fa-plus"></i>
-                            <span>طلب جديد</span>
-                        </a>
-                    </div>
+                        <span class="d-block mb-1 text-decoration-underline fw-bold text-center">المرفقات</span>
+                        <span class="docs-requirements d-block text-center mb-4 fw-bold">* JPG، PNG، PDF، DOC | الحد الأقصى: 2 م.ب</span>
+                        <div class="d-flex justify-content-center align-items-center flex-column flex-md-row div-inputs-gap mb-3"> 
+                            <div class="position-relative w-100 overflow-hidden mb-1">
+                                <label class="form-label input-label d-block text-start">جواز السفر</label>
+                                <label for="passports-facility-booking" class="files-input custom-file-input position-relative">
+                                    <i class="fa-solid fa-paperclip"></i>
+                                    <span class="file-text">اختر الملفات</span>
+                                </label>
+                                <input type="file" id="passports-facility-booking" hidden required>
+                            </div>
+                            <div class="position-relative w-100 overflow-hidden mb-1">
+                                <label class="form-label input-label d-block text-start">هويات المشتركين</label>
+                                <label for="candidates-ids" class="files-input custom-file-input position-relative">
+                                    <i class="fa-solid fa-paperclip"></i>
+                                   <span class="file-text">اختر الملفات</span>
+                                </label>
+                                <input type="file" id="candidates-ids" hidden required>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-center align-items-center flex-column flex-md-row div-inputs-gap mb-3"> 
+                            <div class="position-relative w-100 overflow-hidden mb-1">
+                                <label class="form-label input-label d-block text-start">رسالة تفاصيل الفعالية</label>
+                                <label for="event-details-message-facility-booking" class="files-input custom-file-input position-relative">
+                                    <i class="fa-solid fa-paperclip"></i>
+                                    <span class="file-text">اختر الملفات</span>
+                                </label>
+                                <input type="file" id="event-details-message-facility-booking" hidden required>
+                            </div>
+                            <div class="position-relative w-100 overflow-hidden mb-1">
+                                <label class="form-label input-label d-block text-start">الرخصة التجارية</label>
+                                <label for="commercial-license-facility-booking" class="files-input custom-file-input position-relative">
+                                    <i class="fa-solid fa-paperclip"></i>
+                                   <span class="file-text">اختر الملفات</span>
+                                </label>
+                                <input type="file" id="commercial-license-facility-booking" hidden required>
+                            </div>
+                        </div>
+                        <div class="position-relative overflow-hidden mb-3">
+                            <label class="form-label input-label d-block text-start">احتياجات الجهة (إن وجد)</label>
+                            <label for="entity-requirements-facility-booking" class="files-input custom-file-input position-relative">
+                                <i class="fa-solid fa-paperclip"></i>
+                                <span class="file-text">اختر الملفات</span>
+                            </label>
+                            <input type="file" id="entity-requirements-facility-booking" hidden>
+                        </div>
+                        <span class="docs-requirements d-block text-center mb-4 fw-bold">* جميع الوثائق المرفقة يجب أن تكون سارية</span>
+                        <div class="checkbox-form d-flex justify-content-end flex-column flex-md-row">
+                            <div class="form-check d-flex align-items-center gap-2">
+                                <input class="form-check-input" type="checkbox" value="terms-and-conditions" id="checkDefault" required>
+                                <label class="form-check-label input-label" for="checkDefault">
+                                    الشروط والأحكام
+                                </label>
+                            </div>
+                            <div class="form-check d-flex align-items-center gap-2">
+                                <input class="form-check-input" type="checkbox" value="disabilities" id="checkChecked">
+                                <label class="form-check-label input-label" for="checkChecked">
+                                    أصحاب الهمم
+                                </label>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn main-btn submit-btn d-block mx-auto fw-bold overflow-hidden mt-4 position-relative w-100">
+                            <i class="fa-solid fa-floppy-disk fa-lg position-relative top-0 start-0"></i>
+                            <span>حفظ</span>
+                        </button>
+                    </form>
                 </div>
             </section>
 
-
         </main>
     </div>
-
 
 
 
@@ -320,8 +355,9 @@
         </div>
     </footer>
 
+
     <script src="js/bootstrap.bundle.min.js"></script>
-    <script src="js/dashboard.js"></script>
+    <script src="js/requests.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>

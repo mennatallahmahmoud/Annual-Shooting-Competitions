@@ -6,11 +6,7 @@ const hidePassIcon = document.querySelector(".login-form .hide-pass-icon")
 
 form.addEventListener("submit", (e) => {
   e.preventDefault()
-  if(loginEmail.value.trim() !== "" && loginPass.value.trim() !== "") {
-    e.preventDefault()
-    window.location.href = "dashboard.html"
-    window.localStorage.setItem("username", JSON.stringify({username: loginEmail.value, isLogged: true}))
-  }
+  window.location.href = "dashboard.html"
 })
 showPassIcon.addEventListener("click", () => {
   showPassIcon.classList.add("d-none")

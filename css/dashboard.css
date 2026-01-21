@@ -81,7 +81,7 @@ aside .sidebar-tabs ul li:not(:last-child), aside .sidebar-head {
 aside .sidebar-head, .sidebar-tabs ul li a {
     color: var(--text-color);
 }
-.sidebar-tabs ul li button {
+.sidebar-tabs ul li button, .sidebar-tabs ul li > a {
     font-size: 14px;
     padding: 14px;
     transition: color 0.5s;
@@ -108,7 +108,7 @@ aside .sidebar-tabs ul li.sidebar-tab:nth-of-type(4).active i, aside .sidebar-ta
 .sidebar-tabs ul li.active::before {
     width: 100%;
 }
-aside .sidebar-tabs ul li:hover button {
+aside .sidebar-tabs ul li:hover button, .sidebar-tabs ul li:hover > a:not(.dropdown-item) {
     color: white !important;
 }
 aside .sidebar-tabs ul li i {
@@ -125,7 +125,7 @@ aside .sidebar-tabs ul li i, aside .sidebar-tabs ul li span {
     background-color: transparent !important;
 }
 .sidebar-tabs .dropdown-menu li a.active, .sidebar-tabs .dropdown-menu li a:focus, 
-.main-menu .navbar-nav li a.active:not(.navbar-logout a),  .main-menu .navbarnav li a:focus:not(.navbar-logout a) {
+.main-menu .navbar-nav .dropdown-menu li a.active:not(.navbar-logout a),  .main-menu .navbarnav .dropdown-menu li a:focus:not(.navbar-logout a) {
     background-color: #bf966e;
     border-radius: 0 4px 0 0;
 }
@@ -280,6 +280,9 @@ main .main-btn {
     margin-left: auto;
     margin-right: auto;
 }
+.forms form h3 svg {
+    transform: rotate(180deg);
+}
 .forms form input[type="text"], .forms form input[type="number"], .forms form select {
     padding-right: 35px;
 }
@@ -386,9 +389,6 @@ select option:checked, option:hover {
     }
 }
 @media (min-width: 992px) {
-    .sidebar-tabs .dropdown:hover > .dropdown-menu {
-        display: block;
-    }
     .sidebar-tabs .sidebar-tab.active ul {
         display: block;
         position: relative;

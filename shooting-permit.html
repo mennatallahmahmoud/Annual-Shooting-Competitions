@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>طلب تصريح تصوير</title>
+    <link rel="icon" href="imgs/logo.webp"/>
+    <link rel="stylesheet" href="css/bootstrap.rtl.css"/>
+    <link rel="stylesheet" href="css/bootstrap.rtl.min.css"/>
+    <link rel="stylesheet" href="css/css/all.min.css"/>
+    <link rel="stylesheet" href="css/css/all.css"/>
+    <link rel="stylesheet" href="css/dashboard.css"/>
+    <link rel="stylesheet" href="css/main.css"/>
+</head>
+<body>
+    
+    <nav class="navbar navbar-expand-md d-none d-lg-block sub-menu position-relative">
+        <div class="container-fluid text-center">
+            <div class="register logout-btn d-flex justify-content-center align-items-center">
+                <button class="btn overflow-hidden d-flex gap-1 align-items-center justify-content-between border-0 mx-auto p-2">
+                    <i class="fa-solid fa-right-from-bracket fa-xs text-white"></i>
+                    <a href="login.html" class="main-links card-link fw-bold text-white">تسجيل الخروج</a>
+                </button>
+            </div>
+            <p id="date" class="text-white mb-0"></p>
+        </div>
+    </nav>
+
+    <nav class="navbar login-navbar p-0 middle-menu position-relative">
+        <div class="container position-relative">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <img src="imgs/logo.webp" alt="شعار مسابقات الرماية السنوية" class="logo"/>
+                <p class="mb-0 ps-2">
+                    <span class="d-block">مسابقات الرماية السنوية</span>
+                    <span>Annual Shooting Competitions</span>
+                </p>
+            </a>
+        </div>
+    </nav>
+
+    <nav class="navbar navbar-expand-lg main-menu position-relative d-lg-none">
+        <div class="container position-relative">
+            <button class="navbar-toggler d-flex border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fa-solid fa-bars-staggered navbar-fa-icon d-lg-none"></i>
+                <i class="fa-solid fa-xmark d-lg-none"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav mx-auto align-items-center p-3">
+                    <li class="position-relative mb-2 nav-item dropdown tracking-sidebar-tab sidebar-tab active" data-target="tracking">
+                        <button class="nav-link fw-bold d-flex align-items-center justify-content-start gap-3 w-100 dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" type="button">
+                            <span>متابعة الطلبات</span>
+                        </button>
+
+                        <ul class="dropdown-menu w-100">
+                            <li>
+                                <a href="dashboard.html" class="dropdown-item sidebar-drop-down" data-type="shooting_permit">
+                                    تصريح تصوير
+                                </a>
+                            </li>
+                            <li>
+                                <a href="dashboard.html" class="dropdown-item sidebar-drop-down" data-type="events_permit">
+                                    تصريح فعاليات
+                                </a>
+                            </li>
+                            <li>
+                                <a href="dashboard.html" class="dropdown-item sidebar-drop-down" data-type="facility_booking">
+                                    حجز مرافق
+                                </a>
+                            </li>
+                            <li>
+                                <a href="dashboard.html" class="dropdown-item sidebar-drop-down" data-type="billboard_booking">
+                                    حجز اللوحات الإعلانية
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="position-relative mb-2 nav-item dropdown requests-sidebar-tab sidebar-tab" data-target="orders">
+                        <button class="nav-link fw-bold d-flex align-items-center justify-content-start gap-3 w-100 dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" type="button">
+                            <span>طلب جديد</span>
+                        </button>
+
+                        <ul class="dropdown-menu w-100">
+                            <li>
+                                <a href="shooting-permit.html" class="dropdown-item sidebar-drop-down active" data-type="shooting_permit_request">
+                                    طلب تصريح تصوير
+                                </a>
+                            </li>
+                            <li>
+                                <a href="events-permit.html" class="dropdown-item sidebar-drop-down" data-type="events_permit_request">
+                                    طلب تصريح فعاليات
+                                </a>
+                            </li>
+                            <li>
+                                <a href="facility-booking.html" class="dropdown-item sidebar-drop-down" data-type="facility_booking_request">
+                                    طلب حجز مرافق
+                                </a>
+                            </li>
+                            <li>
+                                <a href="billboard-booking.html" class="dropdown-item sidebar-drop-down" data-type="billboard_booking_request">
+                                    طلب حجز اللوحات الإعلانية
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="position-relative mb-2 nav-item dropdown sidebar-tab" data-target="settings">
+                        <a href="account-settings.html" class="nav-link fw-bold d-flex align-items-center justify-content-start gap-3 w-100" type="button">
+                            <span>إعدادات الحساب</span>
+                        </a>
+                    </li>
+                    <li class="position-relative mb-2 nav-item dropdown sidebar-tab" data-target="documents">
+                        <a href="documents.html" class="nav-link fw-bold d-flex align-items-center justify-content-start gap-3 w-100" type="button">
+                            <span>المستندات</span>
+                        </a>
+                    </li>
+                    <hr class="w-100 d-lg-none">
+                    <li class="nav-item register-btns-small-screen d-flex d-lg-none">
+                        <button class="navbar-logout nav-link btn overflow-hidden d-flex gap-1 align-items-center justify-content-between border-0 mx-auto p-2" type="button">
+                            <i class="fa-solid fa-right-from-bracket fa-xs"></i>
+                            <a href="login.html" class="main-links card-link fw-bold">تسجيل الخروج</a>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+
+    <div class="main-container container">
+
+        <aside class="d-none d-lg-block position-relative">
+            <div class="sidebar-head d-flex align-items-center justify-content-center flex-column position-relative">
+                <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" fill="#ab7037b3" class="bi bi-person-circle mb-2" viewBox="0 0 16 16">
+                    <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
+                    <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"/>
+                </svg>
+                <span class="username fw-bold"></span>
+            </div>
+            <div class="sidebar-tabs mt-5 position-relative">
+                <ul>
+                    <li class="position-relative mb-2 nav-item dropdown shooting-permit-sidebar-tab sidebar-tab" data-target="tracking">
+                        <a href="dashboard.html" class="nav-link fw-bold d-flex align-items-center justify-content-start gap-3 w-100" type="button">
+                            <span>متابعة الطلبات</span>
+                            <i class="fa-solid fa-angle-left position-relative"></i>
+                        </a>
+
+                        <ul class="dropdown-menu w-100">
+                            <li>
+                                <a href="dashboard.html" class="dropdown-item sidebar-drop-down" data-type="shooting_permit">
+                                    تصريح تصوير
+                                </a>
+                            </li>
+                            <li>
+                                <a href="dashboard.html" class="dropdown-item sidebar-drop-down" data-type="events_permit">
+                                    تصريح فعاليات
+                                </a>
+                            </li>
+                            <li>
+                                <a href="dashboard.html" class="dropdown-item sidebar-drop-down" data-type="facility_booking">
+                                    حجز مرافق
+                                </a>
+                            </li>
+                            <li>
+                                <a href="dashboard.html" class="dropdown-item sidebar-drop-down" data-type="billboard_booking">
+                                    حجز اللوحات الإعلانية
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="position-relative mb-2 nav-item dropdown events-permit-sidebar-tab sidebar-tab active" data-target="orders">
+                        <a href="shooting-permit.html" class="nav-link fw-bold d-flex align-items-center justify-content-start gap-3 w-100" type="button">
+                            <span>طلب جديد</span>
+                            <i class="fa-solid fa-angle-left position-relative"></i>
+                        </a>
+                        <ul class="dropdown-menu w-100">
+                            <li>
+                                <a href="shooting-permit.html" class="dropdown-item sidebar-drop-down active" data-type="shooting_permit_request">
+                                    طلب تصريح تصوير
+                                </a>
+                            </li>
+                            <li>
+                                <a href="events-permit.html" class="dropdown-item sidebar-drop-down" data-type="events_permit_request">
+                                    طلب تصريح فعاليات
+                                </a>
+                            </li>
+                            <li>
+                                <a href="facility-booking.html" class="dropdown-item sidebar-drop-down" data-type="facility_booking_request">
+                                    طلب حجز مرافق
+                                </a>
+                            </li>
+                            <li>
+                                <a href="billboard-booking.html" class="dropdown-item sidebar-drop-down" data-type="billboard_booking_request">
+                                    طلب حجز اللوحات الإعلانية
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="position-relative mb-2 nav-item sidebar-tab" data-target="settings">
+                        <a href="account-settings.html" class="nav-link fw-bold d-flex align-items-center justify-content-start gap-3 w-100" type="button">
+                            <span>إعدادات الحساب</span>
+                            <i class="fa-solid fa-angle-left position-relative"></i>
+                        </a>
+
+                    </li>
+                    <li class="position-relative mb-2 nav-item sidebar-tab" data-target="documents">
+                        <a href="documents.html" class="nav-link fw-bold d-flex align-items-center justify-content-start gap-3 w-100" type="button">
+                            <span>المستندات</span>
+                            <i class="fa-solid fa-angle-left position-relative"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </aside>
+
+
+        <div class="sidebar-head d-flex d-lg-none align-items-center justify-content-center position-relative gap-1 mb-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="#ab7037b3" class="bi bi-person-circle" viewBox="0 0 16 16">
+                <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
+                <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"/>
+            </svg>
+            <span class="username fw-bold"></span>
+        </div>
+
+        <main class="overflow-hidden position-relative overflow-hidden">
+
+            <section id="orders" class="orders position-relative my-4">
+                <div id="forms" class="forms">
+
+                    <form id="shooting_permit_request" class="shooting-permit-form">
+                        <h3 class="section-heading fw-bold mb-3">
+                            <span class="d-block">طلب تصريح تصوير</span>
+                            <svg width="270" height="24" viewBox="0 0 270 24" xmlns="http://www.w3.org/2000/svg" class="d-none d-lg-block">
+                                <rect x="0" y="11" width="190" height="2" rx="1" fill="#ab7037"/>
+                                <rect x="170" y="7" width="20" height="10" rx="2" fill="#ab7037"/>
+                            </svg>
+                            <svg width="200" height="24" viewBox="0 0 270 24" xmlns="http://www.w3.org/2000/svg" class="d-lg-none">
+                                <rect x="0" y="11" width="190" height="2" rx="1" fill="#ab7037"/>
+                                <rect x="170" y="7" width="20" height="10" rx="2" fill="#ab7037"/>
+                            </svg>
+                        </h3>
+                        <div class="position-relative">
+                            <label for="subject" class="form-label input-label d-block text-start">الموضوع</label>
+                            <input type="text" class="form-control text-start" id="subject" placeholder="تصوير فيلم وثائقي" required minlength="2">
+                            <i class="fa-solid fa-pen-to-square"></i>
+                        </div>
+                        <div class="my-4 d-flex justify-content-start flex-column flex-md-row wrap">
+                            <span class="input-label mt-1">نوع التصوير:</span>
+                            <div class="div-inputs-gap d-flex justify-content-evenly flex-column flex-md-row wrap ms-4">                
+                                <div class="form-check d-flex align-items-center gap-1">
+                                    <input class="form-check-input" type="radio" name="radioDefault" id="government" checked>
+                                    <label class="form-check-label input-label" for="government">أرضي</label>
+                                </div>
+                                <div class="form-check d-flex align-items-center gap-1">
+                                    <input class="form-check-input" type="radio" name="radioDefault" id="non-profit">
+                                    <label class="form-check-label input-label" for="non-profit">بحري</label>
+                                </div>
+                                <div class="form-check d-flex align-items-center gap-1">
+                                    <input class="form-check-input" type="radio" name="radioDefault" id="private">
+                                    <label class="form-check-label input-label" for="private">جوي</label>
+                                </div>
+                                <div class="form-check d-flex align-items-center gap-1">
+                                    <input class="form-check-input" type="radio" name="radioDefault" id="individual">
+                                    <label class="form-check-label input-label" for="individual">أرضي جوي</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-center align-items-center flex-column flex-md-row div-inputs-gap mb-3"> 
+                            <div class="position-relative w-100 mb-1">
+                                <label for="location" class="form-label input-label d-block text-start">موقع المنطقة</label>
+                                <input id="location" type="text" class="form-control text-start" placeholder="اكتب الموقع بالتفصيل" required minlength="2">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div class="position-relative w-100 mb-1">
+                                <label for="company-name" class="form-label input-label d-block text-start">لصالح شركة</label>
+                                <input id="company-name" type="text" class="form-control text-start" placeholder="اسم الشركة" required minlength="2">
+                                <i class="fa-solid fa-building"></i>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-center align-items-center flex-column flex-md-row div-inputs-gap mb-3"> 
+                            <div class="position-relative w-100 mb-1">
+                                <label for="start-shooting-date" class="form-label input-label d-block text-start">تاريخ بداية التصوير</label>
+                                <input id="start-shooting-date" type="date" class="form-control text-start" required onfocus="this.showPicker()">
+                                <i class="fa-solid fa-calendar-days"></i>
+                            </div>
+                            <div class="position-relative w-100 mb-1">
+                                <label for="end-shooting-date" class="form-label input-label d-block text-start">تاريخ نهاية التصوير</label>
+                                <input id="end-shooting-date" type="date" class="form-control text-start" required onfocus="this.showPicker()">
+                                <i class="fa-solid fa-calendar-days"></i>
+                            </div>
+                        </div>
+                        <div class="position-relative mb-3">
+                            <label for="duration" class="form-label input-label d-block text-start">فترة التصوير</label>
+                            <input type="number" class="form-control text-start" id="duration" placeholder="مثال : 8" required min="1">
+                            <i class="fa-solid fa-hourglass-half"></i>
+                        </div>
+                        <div class="mb-2 d-flex justify-content-center align-items-center flex-column flex-md-row div-inputs-gap mb-3"> 
+                            <div class="position-relative w-100 mb-1">
+                                <label for="start-shooting-time" class="form-label input-label d-block text-start">وقت بدء التصوير</label>
+                                <input id="start-shooting-time" type="time" class="form-control text-start" required onfocus="this.showPicker()">
+                                <i class="fa-regular fa-clock"></i>
+                            </div>
+                            <div class="position-relative w-100 mb-1">
+                                <label for="end-shooting-time" class="form-label input-label d-block text-start">وقت نهاية التصوير</label>
+                                <input id="end-shooting-time" type="time" class="form-control text-start" required onfocus="this.showPicker()">
+                                <i class="fa-regular fa-clock"></i>
+                            </div>
+                        </div>
+                        <span class="d-block mb-1 text-decoration-underline fw-bold text-center">المرفقات</span>
+                        <span class="docs-requirements d-block text-center mb-4 fw-bold">* JPG، PNG، PDF، DOC | الحد الأقصى: 2 م.ب</span>
+                        <div class="d-flex justify-content-center align-items-center flex-column flex-md-row div-inputs-gap mb-3"> 
+                            <div class="position-relative w-100 overflow-hidden mb-1">
+                                <label class="form-label input-label d-block text-start">جواز السفر الخاص بالفريق</label>
+                                <label for="team-passports" class="files-input custom-file-input position-relative">
+                                    <i class="fa-solid fa-paperclip"></i>
+                                    <span class="file-text">اختر الملفات</span>
+                                </label>
+                                <input type="file" id="team-passports" hidden required>
+                            </div>
+                            <div class="position-relative w-100 overflow-hidden mb-1">
+                                <label class="form-label input-label d-block text-start">هويات الفريق</label>
+                                <label for="team-ids" class="files-input custom-file-input position-relative">
+                                    <i class="fa-solid fa-paperclip"></i>
+                                   <span class="file-text">اختر الملفات</span>
+                                </label>
+                                <input type="file" id="team-ids" hidden required>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-center align-items-center flex-column flex-md-row div-inputs-gap mb-3"> 
+                            <div class="position-relative w-100 overflow-hidden mb-1">
+                                <label class="form-label input-label d-block text-start">رسالة تفاصيل التصوير</label>
+                                <label for="shooting-details-message" class="files-input custom-file-input position-relative">
+                                    <i class="fa-solid fa-paperclip"></i>
+                                    <span class="file-text">اختر الملفات</span>
+                                </label>
+                                <input type="file" id="shooting-details-message" hidden required>
+                            </div>
+                            <div class="position-relative w-100 overflow-hidden mb-1">
+                                <label class="form-label input-label d-block text-start">الرخصة التجارية</label>
+                                <label for="commercial-license" class="files-input custom-file-input position-relative">
+                                    <i class="fa-solid fa-paperclip"></i>
+                                   <span class="file-text">اختر الملفات</span>
+                                </label>
+                                <input type="file" id="commercial-license" hidden required>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-center align-items-center flex-column flex-md-row div-inputs-gap mb-3"> 
+                            <div class="position-relative w-100 overflow-hidden mb-1">
+                                <label class="form-label input-label d-block text-start">ملف التعرف</label>
+                                <label for="id-document" class="files-input custom-file-input position-relative">
+                                    <i class="fa-solid fa-paperclip"></i>
+                                    <span class="file-text">اختر الملفات</span>
+                                </label>
+                                <input type="file" id="id-document" hidden required>
+                            </div>
+                            <div class="position-relative w-100 overflow-hidden mb-1">
+                                <label class="form-label input-label d-block text-start">تأشيرة دخول الدولة فى حالة الطاقم من الخارج</label>
+                                <label for="entry-visa" class="files-input custom-file-input position-relative">
+                                    <i class="fa-solid fa-paperclip"></i>
+                                   <span class="file-text">اختر الملفات</span>
+                                </label>
+                                <input type="file" id="entry-visa" hidden required>
+                            </div>
+                        </div>
+                        <span class="docs-requirements d-block text-center mb-4 fw-bold">* جميع الوثائق المرفقة يجب أن تكون سارية</span>
+                        <div class="checkbox-form d-flex justify-content-end flex-column flex-md-row">
+                            <div class="form-check d-flex align-items-center gap-2">
+                                <input class="form-check-input" type="checkbox" value="terms-and-conditions" id="checkDefault" required>
+                                <label class="form-check-label input-label" for="checkDefault">
+                                    الشروط والأحكام
+                                </label>
+                            </div>
+                            <div class="form-check d-flex align-items-center gap-2">
+                                <input class="form-check-input" type="checkbox" value="disabilities" id="checkChecked">
+                                <label class="form-check-label input-label" for="checkChecked">
+                                    أصحاب الهمم
+                                </label>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn main-btn submit-btn d-block mx-auto fw-bold overflow-hidden mt-4 position-relative w-100">
+                            <i class="fa-solid fa-floppy-disk fa-lg position-relative top-0 start-0"></i>
+                            <span>حفظ</span>
+                        </button>
+                    </form>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+
+
+
+    <footer class="p-0">
+        <div class="copyright position-relative text-white p-2 fw-bold d-flex justify-content-between align-items-center">
+            <p class="mb-0 d-inline">جميع الحقوق محفوظة مسابقات الرماية <span class="copyright-year"></span></p>
+            <p class="mb-0 d-inline">
+                <a href="https://esmart-vision.com" target="_blank"><img src="imgs/logo_4.png" alt="Smart Vision Logo"/></a>
+                Powered by
+            </p>
+        </div>
+    </footer>
+
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/requests.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
